@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
 import './style.css'
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blog />} />
+        <Route path="/blogs/:slug" element={<BlogPost />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
