@@ -1,4 +1,42 @@
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+const testimonials = [
+  {
+    quote1: "Chatterify transformed the way we handle customer interactions. Their AI chatbot handles 80% of our queries automatically, saving us hours every week.",
+    quote2: "The team was responsive, transparent and delivered beyond expectations. Their web development and automation services are top-notch — highly recommended for any startup.",
+    name: "Satisfied Client",
+    title: "Startup Founder",
+    image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=crop&w=100&q=80"
+  },
+  {
+    quote1: "Working with Chatterify on our premium e-commerce site was flawless. They nailed the design, and the custom checkout flow they built increased our conversion rate overnight.",
+    quote2: "We're extremely pleased with the modern stack performance. It's lightning-fast and our mobile users love it.",
+    name: "Alex Mercer",
+    title: "E-Commerce Director",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&q=80"
+  },
+  {
+    quote1: "The AI Voice agent they deployed for our sales team is basically a 24/7 SDR. It books meetings, answers FAQs, and qualifies leads exactly as trained without taking a break.",
+    quote2: "If you're looking for genuine AI automation that delivers ROI rather than an expensive gimmick, Chatterify is the right choice.",
+    name: "Sarah Jenkins",
+    title: "VP of Sales",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80"
+  }
+];
+
 export default function Home() {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const activeTestimonial = testimonials[currentTestimonial];
+
   return (
     <>
       <section className="hero">
@@ -43,36 +81,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="services">
+      <section className="services" id="services">
         <div className="container services-container">
           <div className="services-left">
             <div className="badge">Our Services</div>
             <h2 className="section-title">End-to-end digital<br />solutions for modern<br />businesses</h2>
             <p>From web development to AI automation, we deliver high-quality solutions at affordable prices.</p>
-            <a href="/services" className="btn btn-solid mt-6">View Packages</a>
+            <Link to="/services" className="btn btn-solid mt-6">View Packages</Link>
           </div>
           <div className="services-grid">
-            <div className="service-card light-card">
+            <Link to="/web-development" className="service-card dark-card highlight-card">
               <h3>Full-Stack<br />Web Development</h3>
               <p>Custom, responsive and scalable websites — landing pages, business sites, e-commerce and web applications.</p>
-              <i className="fa-solid fa-arrow-right icon-arrow"></i>
-            </div>
-            <div className="service-card light-card">
+              <i className="fa-solid fa-arrow-up-right-from-square icon-arrow"></i>
+            </Link>
+            <Link to="/ai-chatbots" className="service-card light-card">
               <h3>AI Chatbot<br />Integration</h3>
               <p>Smart chatbots that automate customer support, answer queries and boost engagement across your platforms.</p>
               <i className="fa-solid fa-arrow-right icon-arrow"></i>
-            </div>
-            <div className="service-card dark-card">
+            </Link>
+            <Link to="/voice-agents" className="service-card light-card">
               <h3>AI Voice<br />Agents</h3>
               <p>Voice automation systems that handle calls, assist customers and integrate seamlessly with your business workflows.</p>
-              <i className="fa-solid fa-arrow-up-right-from-square icon-arrow"></i>
-              <img className="cursor-hand" src="https://cdn-icons-png.flaticon.com/512/8046/8046039.png" alt="Cursor" />
-            </div>
-            <div className="service-card light-card">
+              <i className="fa-solid fa-arrow-right icon-arrow"></i>
+            </Link>
+            <Link to="/video-editing" className="service-card light-card">
               <h3>Video Editing<br />&amp; Production</h3>
               <p>Professional video editing for marketing, social media, YouTube content and promotional campaigns.</p>
               <i className="fa-solid fa-arrow-right icon-arrow"></i>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -192,14 +229,25 @@ export default function Home() {
       <section className="testimonial">
         <div className="container testimonial-container">
           <div className="quote-icon">"</div>
-          <p className="quote-text mb-6">"Chatterify transformed the way we handle customer interactions. Their AI chatbot handles 80% of our queries automatically, saving us hours every week."</p>
-          <p className="quote-text">"The team was responsive, transparent and delivered beyond expectations. Their web development and automation services are top-notch — highly recommended for any startup."</p>
-          <div className="author">
-            <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=crop&w=100&q=80" alt="Client" className="author-img" />
-            <div className="author-info">
-              <div className="author-name">Satisfied Client</div>
-              <div className="author-title">Startup Founder</div>
+          <div key={currentTestimonial} className="animate-fade-in">
+            <p className="quote-text mb-6">"{activeTestimonial.quote1}"</p>
+            {activeTestimonial.quote2 && <p className="quote-text">"{activeTestimonial.quote2}"</p>}
+            <div className="author">
+              <img src={activeTestimonial.image} alt={activeTestimonial.name} className="author-img" />
+              <div className="author-info">
+                <div className="author-name">{activeTestimonial.name}</div>
+                <div className="author-title">{activeTestimonial.title}</div>
+              </div>
             </div>
+          </div>
+          <div className="carousel-dots">
+             {testimonials.map((_, idx) => (
+               <div 
+                 key={idx} 
+                 className={`carousel-dot ${idx === currentTestimonial ? 'active' : ''}`}
+                 onClick={() => setCurrentTestimonial(idx)}
+               ></div>
+             ))}
           </div>
         </div>
       </section>

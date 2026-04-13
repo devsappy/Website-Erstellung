@@ -90,7 +90,6 @@ export default function Contact() {
 
       <section className="contact-social">
         <div className="container">
-          <div className="badge">Connect With Us</div>
           <h2 className="section-title">Find us online</h2>
           <div className="social-cards">
             <a href="#" className="social-card">

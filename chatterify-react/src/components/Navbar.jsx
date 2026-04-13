@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className="navbar">
       <div className="container nav-container">
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" onClick={handleScrollTop}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="9" height="9" rx="1" fill="#111"/>
             <rect x="2" y="13" width="9" height="9" rx="1" fill="#111"/>
@@ -14,13 +18,13 @@ export default function Navbar() {
           <span>Chatterify</span>
         </Link>
         <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/blogs">Blogs</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/" onClick={handleScrollTop}>Home</Link>
+          <Link to="/blogs" onClick={handleScrollTop}>Blogs</Link>
+          <Link to="/about" onClick={handleScrollTop}>About Us</Link>
+          <Link to="/services" onClick={handleScrollTop}>Templates</Link>
+          <Link to="/contact" onClick={handleScrollTop}>Contact</Link>
         </nav>
-        <Link to="/contact" className="btn btn-outline">Get Started</Link>
+        <Link to="/contact" className="btn btn-outline" onClick={handleScrollTop}>Get Started</Link>
       </div>
     </header>
   )

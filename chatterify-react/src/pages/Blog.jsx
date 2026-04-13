@@ -13,7 +13,7 @@ export default function Blog() {
         <div className="container">
           <div className="blog-featured-card">
             <div className="blog-featured-image">
-              <img src="https://images.unsplash.com/photo-1677442136019-7772581e1272?auto=format&fit=crop&w=1200&q=80" alt="AI Chatbots for Business" />
+              <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1200&q=80" alt="AI Chatbots for Business" />
             </div>
             <div className="blog-featured-content">
               <div className="blog-tag">AI Chatbots</div>

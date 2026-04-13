@@ -1,16 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
+import WebDevelopment from './pages/WebDevelopment';
+import AIChatbots from './pages/AIChatbots';
+import VoiceAgents from './pages/VoiceAgents';
+import VideoEditing from './pages/VideoEditing';
 import './style.css'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,6 +24,10 @@ function App() {
         <Route path="/blogs" element={<Blog />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/web-development" element={<WebDevelopment />} />
+        <Route path="/ai-chatbots" element={<AIChatbots />} />
+        <Route path="/voice-agents" element={<VoiceAgents />} />
+        <Route path="/video-editing" element={<VideoEditing />} />
       </Routes>
       <Footer />
     </Router>
