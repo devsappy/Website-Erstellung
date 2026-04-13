@@ -1,0 +1,9 @@
+{
+  "buildCommand": "cd chatterify-react && npm install && npm run build",
+  "outputDirectory": "chatterify-react/dist",
+  "installCommand": "cd chatterify-react && npm install",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
