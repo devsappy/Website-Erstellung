@@ -7,8 +7,7 @@ export default function Contact() {
     <>
       <section className="page-header">
         <div className="container">
-          <div className="badge">Contact</div>
-          <h1 className="section-title">Let's build<br />something great</h1>
+          <h1 className="section-title">Let's build something great</h1>
           <p className="page-header-desc">Have a project in mind or want to learn more about our services? Reach out — we'd love to help you grow your business with smart digital solutions.</p>
         </div>
       </section>
@@ -18,18 +17,24 @@ export default function Contact() {
           <div className="contact-info-cards">
             <div className="contact-info-card">
               <div className="contact-info-icon"><i className="fa-solid fa-envelope"></i></div>
-              <h3>Email</h3>
-              <p>hello@chatterify.in</p>
+              <div className="contact-info-content">
+                <h3>Email</h3>
+                <p>hello@chatterify.in</p>
+              </div>
             </div>
             <div className="contact-info-card">
               <div className="contact-info-icon"><i className="fa-solid fa-globe"></i></div>
-              <h3>Website</h3>
-              <p>chatterify.in</p>
+              <div className="contact-info-content">
+                <h3>Website</h3>
+                <p>chatterify.in</p>
+              </div>
             </div>
             <div className="contact-info-card">
               <div className="contact-info-icon"><i className="fa-solid fa-clock"></i></div>
-              <h3>Response Time</h3>
-              <p>We typically respond within 24 hours</p>
+              <div className="contact-info-content">
+                <h3>Response Time</h3>
+                <p>Within 24 hours</p>
+              </div>
             </div>
           </div>
 
