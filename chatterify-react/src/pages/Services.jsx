@@ -1,210 +1,191 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const services = [
+  {
+    icon: 'fa-solid fa-code',
+    title: 'Web Development',
+    subtitle: 'Websites & Web Apps',
+    description: 'Custom, responsive and scalable websites — landing pages, business sites, e-commerce and web applications built with modern frameworks.',
+    features: ['React / Next.js', 'Responsive Design', 'SEO Optimized', 'API Integration', 'Performance Tuned', 'Secure & Scalable'],
+    link: '/web-development',
+  },
+  {
+    icon: 'fa-solid fa-robot',
+    title: 'AI Chatbots',
+    subtitle: 'Smart Automation',
+    description: 'Intelligent chatbots trained on your business data that automate customer support, capture leads and boost engagement 24/7.',
+    features: ['Custom Training', 'Multi-Platform', 'Lead Capture', 'CRM Sync', 'WhatsApp & Social', 'Analytics Dashboard'],
+    link: '/ai-chatbots',
+  },
+  {
+    icon: 'fa-solid fa-headset',
+    title: 'Voice Agents',
+    subtitle: 'Call Automation',
+    description: 'AI-powered voice systems that handle inbound and outbound calls, qualify leads and integrate with your business workflows.',
+    features: ['Call Handling', 'Lead Qualification', 'CRM Integration', 'Custom Scripts', 'Multi-Language', 'Real-Time Analytics'],
+    link: '/voice-agents',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How long does a typical project take?',
+    a: 'Timelines depend on scope. A landing page takes 3-5 days, a business website 1-2 weeks, and custom applications 4-8 weeks. We provide a clear timeline after the discovery call.',
+  },
+  {
+    q: 'Do you offer post-launch support?',
+    a: 'Yes. All packages include post-launch support. The duration depends on the package tier and is discussed during the introductory meeting.',
+  },
+  {
+    q: 'Can I upgrade my package later?',
+    a: 'Absolutely. You can start with Starter and upgrade anytime. We credit your existing investment toward the upgraded package.',
+  },
+  {
+    q: 'What technologies do you use?',
+    a: 'We use modern, battle-tested technologies including React, Next.js, Node.js, Python, PostgreSQL, MongoDB, AWS and more. We choose the best stack for your specific needs.',
+  },
+  {
+    q: 'Do you work with clients outside India?',
+    a: 'Yes. We work with clients globally. All communication is in English and we accommodate different time zones for meetings and support.',
+  },
+];
+
 export default function Services() {
+  const [openFaq, setOpenFaq] = useState(null);
+
   return (
     <>
+      {/* Hero */}
       <section className="page-header">
         <div className="container">
-          <div className="badge">Services &amp; Packages</div>
-          <h1 className="section-title">Affordable digital<br />solutions for every<br />business size</h1>
-          <p className="page-header-desc">From startup essentials to enterprise automation — choose the package that fits your needs and budget.</p>
+          <div className="badge">Our Services</div>
+          <h1 className="section-title">Everything you need to<br />grow your business online</h1>
+          <p className="page-header-desc">From a simple landing page to full-scale AI automation — we build solutions that deliver real results.</p>
         </div>
       </section>
 
-      <section className="templates-filter">
+      {/* Services Overview */}
+      <section className="svc-overview">
         <div className="container">
-          <div className="filter-tabs">
-            <button className="filter-tab active" data-filter="all">All</button>
-            <button className="filter-tab" data-filter="web">Web Dev</button>
-            <button className="filter-tab" data-filter="ai">AI &amp; Chatbots</button>
-            <button className="filter-tab" data-filter="voice">Voice AI</button>
-
-            <button className="filter-tab" data-filter="packages">Packages</button>
+          <div className="svc-overview-grid">
+            {services.map((svc) => (
+              <Link to={svc.link} className="svc-overview-card" key={svc.title}>
+                <div className="svc-card-top">
+                  <div className="svc-overview-icon">
+                    <i className={svc.icon}></i>
+                  </div>
+                  <span className="svc-subtitle">{svc.subtitle}</span>
+                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.description}</p>
+                <div className="svc-divider"></div>
+                <ul className="svc-feature-list">
+                  {svc.features.map((f) => (
+                    <li key={f}><i className="fa-solid fa-circle-check"></i> {f}</li>
+                  ))}
+                </ul>
+                <span className="svc-learn-more">
+                  Explore service <i className="fa-solid fa-arrow-right"></i>
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="templates-grid-section">
+      {/* How It Works */}
+      <section className="svc-process">
         <div className="container">
-          <div className="templates-grid">
-            <div className="template-card" data-category="web">
-              <div className="template-card-image">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Landing Page" />
-                <div className="template-overlay">
-                  <a href="/contact" className="btn btn-sm btn-white">Get Quote</a>
-                </div>
-              </div>
-              <div className="template-card-info">
-                <div className="template-tags">
-                  <span className="template-tag">Web Dev</span>
-                  <span className="template-tag">Starter</span>
-                </div>
-                <h3>Landing Page Website</h3>
-                <p>Single-page responsive landing site to establish your online presence quickly and effectively.</p>
-                <div className="template-meta">
-                  <span><i className="fa-solid fa-indian-rupee-sign"></i> 5,000 - 12,000</span>
-                  <span><i className="fa-solid fa-clock"></i> 3-5 days</span>
-                </div>
-              </div>
+          <div className="badge">How It Works</div>
+          <h2 className="section-title">From first call to launch</h2>
+          <p className="svc-process-subtitle">Pricing is tailored to your project scope. Here's how we get started.</p>
+          <div className="svc-process-grid">
+            <div className="svc-process-step">
+              <div className="svc-step-number">01</div>
+              <h3>Discovery Call</h3>
+              <p>We discuss your business goals, requirements and timeline to understand exactly what you need.</p>
             </div>
-
-            <div className="template-card" data-category="web">
-              <div className="template-card-image">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Business Website" />
-                <div className="template-overlay">
-                  <a href="/contact" className="btn btn-sm btn-white">Get Quote</a>
-                </div>
-              </div>
-              <div className="template-card-info">
-                <div className="template-tags">
-                  <span className="template-tag">Web Dev</span>
-                  <span className="template-tag">Business</span>
-                </div>
-                <h3>Business Website</h3>
-                <p>Multi-page professional website with modern design, optimized for performance and conversions.</p>
-                <div className="template-meta">
-                  <span><i className="fa-solid fa-indian-rupee-sign"></i> 12,000 - 30,000</span>
-                  <span><i className="fa-solid fa-clock"></i> 1-2 weeks</span>
-                </div>
-              </div>
+            <div className="svc-process-step">
+              <div className="svc-step-number">02</div>
+              <h3>Custom Proposal</h3>
+              <p>You receive a detailed scope, timeline and pricing tailored to your project — no generic quotes.</p>
             </div>
-
-            <div className="template-card" data-category="ai">
-              <div className="template-card-image">
-                <img src="https://images.unsplash.com/photo-1677442136019-7772581e1272?auto=format&fit=crop&w=600&q=80" alt="AI Chatbot" />
-                <div className="template-overlay">
-                  <a href="/contact" className="btn btn-sm btn-white">Get Quote</a>
-                </div>
-              </div>
-              <div className="template-card-info">
-                <div className="template-tags">
-                  <span className="template-tag">AI</span>
-                  <span className="template-tag">Chatbot</span>
-                </div>
-                <h3>AI Chatbot Integration</h3>
-                <p>Smart chatbots to automate customer support, handle queries and improve engagement 24/7.</p>
-                <div className="template-meta">
-                  <span><i className="fa-solid fa-indian-rupee-sign"></i> 5,000 - 70,000</span>
-                  <span><i className="fa-solid fa-clock"></i> Custom</span>
-                </div>
-              </div>
+            <div className="svc-process-step">
+              <div className="svc-step-number">03</div>
+              <h3>Build & Review</h3>
+              <p>We design and develop your solution with regular check-ins so you're always in the loop.</p>
             </div>
-
-            <div className="template-card" data-category="voice">
-              <div className="template-card-image">
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80" alt="AI Voice Agent" />
-                <div className="template-overlay">
-                  <a href="/contact" className="btn btn-sm btn-white">Get Quote</a>
-                </div>
-              </div>
-              <div className="template-card-info">
-                <div className="template-tags">
-                  <span className="template-tag">Voice AI</span>
-                  <span className="template-tag">Automation</span>
-                </div>
-                <h3>AI Voice Agents</h3>
-                <p>Voice automation systems that handle calls, assist customers, and integrate with your business workflows.</p>
-                <div className="template-meta">
-                  <span><i className="fa-solid fa-indian-rupee-sign"></i> 10,000 - 1,50,000</span>
-                  <span><i className="fa-solid fa-clock"></i> Custom</span>
-                </div>
-              </div>
+            <div className="svc-process-step">
+              <div className="svc-step-number">04</div>
+              <h3>Launch & Support</h3>
+              <p>We deploy your project and provide ongoing support to make sure everything runs smoothly.</p>
             </div>
+          </div>
+          <div className="svc-process-cta">
+            <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Book a Free Discovery Call</a>
+          </div>
+        </div>
+      </section>
 
-            <div className="template-card" data-category="web">
-              <div className="template-card-image">
-                <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=600&q=80" alt="E-Commerce Website" />
-                <div className="template-overlay">
-                  <a href="/contact" className="btn btn-sm btn-white">Get Quote</a>
-                </div>
-              </div>
-              <div className="template-card-info">
-                <div className="template-tags">
-                  <span className="template-tag">Web Dev</span>
-                  <span className="template-tag">E-Commerce</span>
-                </div>
-                <h3>E-Commerce Website</h3>
-                <p>Full-featured online store with product pages, cart, checkout and payment integration.</p>
-                <div className="template-meta">
-                  <span><i className="fa-solid fa-indian-rupee-sign"></i> 25,000 - 80,000</span>
-                  <span><i className="fa-solid fa-clock"></i> 2-4 weeks</span>
-                </div>
-              </div>
+      {/* Trust / Stats */}
+      <section className="svc-trust">
+        <div className="container">
+          <div className="svc-trust-grid">
+            <div className="svc-trust-item">
+              <h3>5+</h3>
+              <p>Projects Delivered</p>
             </div>
-
-
-
-            <div className="template-card" data-category="web">
-              <div className="template-card-image">
-                <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&w=600&q=80" alt="Custom Web App" />
-                <div className="template-overlay">
-                  <a href="/contact" className="btn btn-sm btn-white">Get Quote</a>
-                </div>
-              </div>
-              <div className="template-card-info">
-                <div className="template-tags">
-                  <span className="template-tag">Web Dev</span>
-                  <span className="template-tag">Custom App</span>
-                </div>
-                <h3>Custom Web Application</h3>
-                <p>Bespoke web applications with advanced functionality, API integrations and scalable architecture.</p>
-                <div className="template-meta">
-                  <span><i className="fa-solid fa-indian-rupee-sign"></i> 30,000 - 1,20,000+</span>
-                  <span><i className="fa-solid fa-clock"></i> 4-8 weeks</span>
-                </div>
-              </div>
+            <div className="svc-trust-item">
+              <h3>100%</h3>
+              <p>On-Time Delivery</p>
             </div>
-
-            <div className="template-card" data-category="ai">
-              <div className="template-card-image">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Agentic AI" />
-                <div className="template-overlay">
-                  <a href="/contact" className="btn btn-sm btn-white">Get Quote</a>
-                </div>
-              </div>
-              <div className="template-card-info">
-                <div className="template-tags">
-                  <span className="template-tag">AI</span>
-                  <span className="template-tag">Agentic</span>
-                </div>
-                <h3>Agentic AI Solutions</h3>
-                <p>Autonomous AI agents for business process automation, workflow optimization and smart decision-making.</p>
-                <div className="template-meta">
-                  <span><i className="fa-solid fa-indian-rupee-sign"></i> Custom Pricing</span>
-                  <span><i className="fa-solid fa-clock"></i> Scoping Required</span>
-                </div>
-              </div>
+            <div className="svc-trust-item">
+              <h3>24/7</h3>
+              <p>AI-Powered Support</p>
             </div>
-
-            <div className="template-card" data-category="packages">
-              <div className="template-card-image">
-                <img src="https://images.unsplash.com/photo-1512941937666-8e1c3f496068?auto=format&fit=crop&w=600&q=80" alt="Starter Package" />
-                <div className="template-overlay">
-                  <a href="/contact" className="btn btn-sm btn-white">Get Started</a>
-                </div>
-              </div>
-              <div className="template-card-info">
-                <div className="template-tags">
-                  <span className="template-tag">Package</span>
-                  <span className="template-tag">Starter</span>
-                </div>
-                <h3>Starter Package — 10,000</h3>
-                <p>Landing page website, basic chatbot and two edited reels — perfect for startups getting off the ground.</p>
-                <div className="template-meta">
-                  <span><i className="fa-solid fa-star"></i> Best Value</span>
-                  <span><i className="fa-solid fa-bolt"></i> Quick Launch</span>
-                </div>
-              </div>
+            <div className="svc-trust-item">
+              <h3>80%+</h3>
+              <p>Client Satisfaction</p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="svc-faq">
+        <div className="container">
+          <div className="badge">FAQ</div>
+          <h2 className="section-title">Frequently asked questions</h2>
+          <div className="svc-faq-list">
+            {faqs.map((faq, idx) => (
+              <div
+                className={`svc-faq-item ${openFaq === idx ? 'svc-faq-open' : ''}`}
+                key={idx}
+              >
+                <button className="svc-faq-question" onClick={() => setOpenFaq(openFaq === idx ? null : idx)}>
+                  <span>{faq.q}</span>
+                  <i className={`fa-solid ${openFaq === idx ? 'fa-minus' : 'fa-plus'}`}></i>
+                </button>
+                {openFaq === idx && (
+                  <div className="svc-faq-answer">
+                    <p>{faq.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="templates-cta">
         <div className="container templates-cta-container">
           <h2>Need a custom solution?</h2>
           <p>Every business is unique. Tell us your requirements and we'll craft a tailored package that delivers real results.</p>
-          <a href="/contact" className="btn btn-solid">Talk to Us</a>
+          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Book a Call</a>
         </div>
       </section>
     </>
-  )
+  );
 }

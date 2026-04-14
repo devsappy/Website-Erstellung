@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import blogPosts from '../data/blogPosts';
 
 const testimonials = [
   {
@@ -160,64 +161,53 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="portfolio">
+      <section className="explore-section">
         <div className="container">
-          <div className="badge">What We Offer</div>
-          <div className="portfolio-header">
-            <h2 className="section-title">Explore our solutions &amp;<br />service capabilities</h2>
-            <p className="section-desc">From chatbots to hosting, we've got every angle covered.</p>
+          <div className="badge">Explore</div>
+          <div className="explore-header">
+            <h2 className="section-title">Check out our work<br />&amp; latest insights</h2>
           </div>
-          <div className="portfolio-grid">
-            <div className="portfolio-card has-overlay">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Web Development" />
-              <div className="overlay">
-                <div className="overlay-tags"><span>Web</span><span>React</span></div>
-                <div className="overlay-bottom">
-                  <h4>Full-Stack Web Development</h4>
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
-              </div>
-            </div>
-            <div className="portfolio-card has-overlay">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Chatbot Integration" />
-              <div className="overlay">
-                <div className="overlay-tags"><span>AI</span><span>Chatbots</span></div>
-                <div className="overlay-bottom">
-                  <h4>Custom AI Chatbots</h4>
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
-              </div>
-            </div>
-            <div className="portfolio-card has-overlay">
-              <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=600&q=80" alt="Backend Systems" />
-              <div className="overlay">
-                <div className="overlay-tags"><span>Cloud</span><span>Backend</span></div>
-                <div className="overlay-bottom">
-                  <h4>Scalable Backend Systems</h4>
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
-              </div>
-            </div>
 
-            <div className="portfolio-card has-overlay">
-              <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&w=600&q=80" alt="AI Automation" />
-              <div className="overlay">
-                <div className="overlay-tags"><span>AI</span><span>Voice</span></div>
-                <div className="overlay-bottom">
-                  <h4>Voice Automation Suite</h4>
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
-              </div>
+          {/* Templates Samples */}
+          <div className="explore-block">
+            <div className="explore-block-top">
+              <h3>Our Templates</h3>
+              <Link to="/templates" className="explore-view-all">View all <i className="fa-solid fa-arrow-right"></i></Link>
             </div>
-            <div className="portfolio-card has-overlay">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Business Automation" />
-              <div className="overlay">
-                <div className="overlay-tags"><span>Auto</span><span>Process</span></div>
-                <div className="overlay-bottom">
-                  <h4>Business Process Automation</h4>
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
-              </div>
+            <div className="explore-samples-grid">
+              {[
+                { title: 'Aset AI', url: 'https://aset-six.vercel.app' },
+                { title: 'CollabTrack', url: 'https://collab-tracker.vercel.app' },
+                { title: 'Matias — Creative Designer', url: 'https://agencyowner-demo.vercel.app' },
+              ].map((item) => (
+                <Link to="/templates" className="explore-sample-card" key={item.title}>
+                  <div className="explore-sample-preview">
+                    <iframe src={item.url} title={item.title} loading="lazy" tabIndex={-1} />
+                  </div>
+                  <span className="explore-sample-title">{item.title}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Blog Samples */}
+          <div className="explore-block">
+            <div className="explore-block-top">
+              <h3>Latest Blogs</h3>
+              <Link to="/blogs" className="explore-view-all">View all <i className="fa-solid fa-arrow-right"></i></Link>
+            </div>
+            <div className="explore-samples-grid">
+              {blogPosts.slice(0, 3).map((post) => (
+                <Link to={`/blogs/${post.slug}`} className="explore-blog-card" key={post.id}>
+                  <div className="explore-blog-image">
+                    <img src={post.image} alt={post.title} />
+                  </div>
+                  <div className="explore-blog-info">
+                    <span className="explore-blog-tag">{post.tag}</span>
+                    <h4>{post.title}</h4>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

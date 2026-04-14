@@ -58,6 +58,13 @@ const projects = [
     tags: ['Portfolio', 'Creative', 'Design'],
     url: 'https://agencyowner-demo.vercel.app',
   },
+  {
+    id: 9,
+    title: 'ChatFlow',
+    description: 'AI-powered customer support platform designed to streamline and automate customer interactions.',
+    tags: ['SaaS', 'AI', 'Customer Support'],
+    url: 'https://landing-page-for-ve.vercel.app',
+  },
 ];
 
 export default function Templates() {
@@ -128,7 +135,6 @@ export default function Templates() {
             <div className="showcase-modal-header">
               <div className="showcase-modal-title">
                 <h3>{activeProject.title}</h3>
-                <span className="showcase-modal-url">{activeProject.url}</span>
               </div>
               <div className="showcase-modal-actions">
                 <a
@@ -159,7 +165,7 @@ export default function Templates() {
         <div className="container templates-cta-container">
           <h2>Want something like this?</h2>
           <p>We build custom websites tailored to your brand. Let's discuss your next project.</p>
-          <Link to="/contact" className="btn btn-solid">Start a Project</Link>
+          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Book a Call</a>
         </div>
       </section>
     </>

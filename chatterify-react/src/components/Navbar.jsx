@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link to="/templates" onClick={handleScrollTop}>Templates</Link>
           <Link to="/contact" onClick={handleScrollTop}>Contact</Link>
         </nav>
-        <Link to="/contact" className="btn btn-outline" onClick={handleScrollTop}>Get Started</Link>
+        <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Book a Call</a>
       </div>
     </header>
   )

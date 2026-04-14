@@ -44,7 +44,7 @@ export default function AIChatbots() {
         <div className="container about-cta-container">
           <h2>Pricing Details</h2>
           <p>Chatbot capabilities vary based on logic complexity and integrations. Pricing will be discussed after an introductory meeting.</p>
-          <Link to="/contact" className="btn btn-solid mt-4">Book a Consultation</Link>
+          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid mt-4">Book a Consultation</a>
         </div>
       </section>
     </>

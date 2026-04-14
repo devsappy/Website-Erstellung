@@ -6,10 +6,10 @@ export default function Footer() {
       <div className="container">
         <div className="cta-section">
           <h1 className="cta-title">Let's Build<br />Together</h1>
-          <Link to="/contact" className="btn btn-hire">
+          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-hire">
             <div className="icon-circle"><i className="fa-solid fa-angles-right"></i></div>
-            Get Started
-          </Link>
+            Book a Call
+          </a>
         </div>
 
         <div className="footer-grid">
