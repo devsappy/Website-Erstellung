@@ -21,7 +21,8 @@ export default function Navbar() {
           <Link to="/" onClick={handleScrollTop}>Home</Link>
           <Link to="/blogs" onClick={handleScrollTop}>Blogs</Link>
           <Link to="/about" onClick={handleScrollTop}>About Us</Link>
-          <Link to="/services" onClick={handleScrollTop}>Templates</Link>
+          <Link to="/services" onClick={handleScrollTop}>Services</Link>
+          <Link to="/templates" onClick={handleScrollTop}>Templates</Link>
           <Link to="/contact" onClick={handleScrollTop}>Contact</Link>
         </nav>
         <Link to="/contact" className="btn btn-outline" onClick={handleScrollTop}>Get Started</Link>

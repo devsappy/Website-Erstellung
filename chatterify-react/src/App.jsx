@@ -11,6 +11,7 @@ import Contact from './pages/Contact'
 import WebDevelopment from './pages/WebDevelopment';
 import AIChatbots from './pages/AIChatbots';
 import VoiceAgents from './pages/VoiceAgents';
+import Templates from './pages/Templates';
 
 import './style.css'
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/web-development" element={<WebDevelopment />} />
         <Route path="/ai-chatbots" element={<AIChatbots />} />
         <Route path="/voice-agents" element={<VoiceAgents />} />
+        <Route path="/templates" element={<Templates />} />
 
       </Routes>
       <Footer />
