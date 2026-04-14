@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
 
 const projects = [
   {
@@ -68,17 +69,19 @@ const projects = [
 ];
 
 export default function Templates() {
+  usePageTitle('Templates & Projekte', {
+    description: 'Referenzprojekte und Templates von Chatterify — Landingpages, E-Commerce, SaaS und Portfolio-Websites für den DACH-Markt.',
+    path: '/templates',
+  });
   const [activeProject, setActiveProject] = useState(null);
 
-  const openPreview = (project) => {
-    setActiveProject(project);
-    document.body.style.overflow = 'hidden';
-  };
+  useEffect(() => {
+    document.body.style.overflow = activeProject ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [activeProject]);
 
-  const closePreview = () => {
-    setActiveProject(null);
-    document.body.style.overflow = '';
-  };
+  const openPreview = (project) => setActiveProject(project);
+  const closePreview = () => setActiveProject(null);
 
   return (
     <>

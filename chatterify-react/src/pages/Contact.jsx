@@ -1,6 +1,38 @@
+import { useState } from 'react';
+import usePageTitle from '../hooks/usePageTitle';
+
+// TODO: Replace with your Web3Forms access key from https://web3forms.com (free)
+const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+
 export default function Contact() {
-  function handleSubmit(e) {
-    e.preventDefault()
+  usePageTitle('Kontakt', {
+    description: 'Kontaktieren Sie Chatterify — Ihre Webdesign Agentur für Österreich und Deutschland. Kostenloses Beratungsgespräch innerhalb von 24 Stunden.',
+    path: '/contact',
+  });
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus('sending');
+
+    const formData = new FormData(e.target);
+    formData.append('access_key', WEB3FORMS_KEY);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus('success');
+        e.target.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   }
 
   return (
@@ -41,7 +73,20 @@ export default function Contact() {
           <div className="contact-form-wrapper">
             <h2>Tell us about your project</h2>
             <p className="form-subtitle">Fill out the form below and our team will get back to you within 24 hours.</p>
+
+            {status === 'success' && (
+              <div className="form-success-msg">
+                <i className="fa-solid fa-circle-check"></i> Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns innerhalb von 24 Stunden.
+              </div>
+            )}
+            {status === 'error' && (
+              <div className="form-error-msg">
+                <i className="fa-solid fa-circle-exclamation"></i> Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an hello@chatterify.in.
+              </div>
+            )}
+
             <form className="contact-form" onSubmit={handleSubmit}>
+              <input type="hidden" name="subject" value="Neue Kontaktanfrage — Chatterify Website" />
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="first-name">First Name</label>
@@ -59,13 +104,13 @@ export default function Contact() {
                 </div>
                 <div className="form-group">
                   <label htmlFor="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+                  <input type="tel" id="phone" name="phone" placeholder="+43 XXX XXXXXXX" />
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="subject">Service Interested In</label>
-                <select id="subject" name="subject" required>
-                  <option value="" disabled selected>Select a service</option>
+                <label htmlFor="service">Service Interested In</label>
+                <select id="service" name="service" defaultValue="" required>
+                  <option value="" disabled>Select a service</option>
                   <option value="web-dev">Web Development</option>
                   <option value="chatbot">AI Chatbot Integration</option>
                   <option value="voice-agent">AI Voice Agents</option>
@@ -81,7 +126,9 @@ export default function Contact() {
                 <label htmlFor="message">Project Details</label>
                 <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, timeline and budget..." required></textarea>
               </div>
-              <button type="submit" className="btn btn-solid btn-full">Send Message <i className="fa-solid fa-paper-plane"></i></button>
+              <button type="submit" className="btn btn-solid btn-full" disabled={status === 'sending'}>
+                {status === 'sending' ? 'Sending...' : 'Send Message'} <i className="fa-solid fa-paper-plane"></i>
+              </button>
             </form>
           </div>
         </div>
@@ -115,5 +162,5 @@ export default function Contact() {
         </div>
       </section>
     </>
-  )
+  );
 }

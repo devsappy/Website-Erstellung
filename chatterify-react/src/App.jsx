@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import ErrorBoundary from './components/ErrorBoundary'
 import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
@@ -12,12 +13,14 @@ import WebDevelopment from './pages/WebDevelopment';
 import AIChatbots from './pages/AIChatbots';
 import VoiceAgents from './pages/VoiceAgents';
 import Templates from './pages/Templates';
+import NotFound from './pages/NotFound';
 
 import './style.css'
 
 function App() {
   return (
     <Router>
+      <ErrorBoundary>
       <ScrollToTop />
       <Navbar />
       <Routes>
@@ -31,9 +34,10 @@ function App() {
         <Route path="/ai-chatbots" element={<AIChatbots />} />
         <Route path="/voice-agents" element={<VoiceAgents />} />
         <Route path="/templates" element={<Templates />} />
-
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      </ErrorBoundary>
     </Router>
   )
 }

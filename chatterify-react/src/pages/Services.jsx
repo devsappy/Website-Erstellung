@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
+import { FaqJsonLd, BreadcrumbJsonLd } from '../components/JsonLd';
 
 const services = [
   {
     icon: 'fa-solid fa-code',
-    title: 'Web Development',
-    subtitle: 'Websites & Web Apps',
-    description: 'Custom, responsive and scalable websites — landing pages, business sites, e-commerce and web applications built with modern frameworks.',
+    title: 'Webdesign & Website-Erstellung',
+    subtitle: 'SEO & Webentwickler DACH',
+    description: 'Hochwertiges Webdesign, responsive Firmen-Websites und Online-Shops (E-Commerce) für Kunden aus Österreich und Deutschland.',
     features: ['React / Next.js', 'Responsive Design', 'SEO Optimized', 'API Integration', 'Performance Tuned', 'Secure & Scalable'],
     link: '/web-development',
   },
@@ -45,23 +47,25 @@ const faqs = [
     q: 'What technologies do you use?',
     a: 'We use modern, battle-tested technologies including React, Next.js, Node.js, Python, PostgreSQL, MongoDB, AWS and more. We choose the best stack for your specific needs.',
   },
-  {
-    q: 'Do you work with clients outside India?',
-    a: 'Yes. We work with clients globally. All communication is in English and we accommodate different time zones for meetings and support.',
-  },
 ];
 
 export default function Services() {
+  usePageTitle('Services — Website-Erstellung & KI-Lösungen', {
+    description: 'Professionelle Website erstellen lassen für Österreich und Deutschland. Webdesign, AI Chatbots, Voice Agents und Automation — alle Pakete und Preise.',
+    path: '/services',
+  });
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
     <>
+      <FaqJsonLd items={faqs} />
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]} />
       {/* Hero */}
       <section className="page-header">
         <div className="container">
-          <div className="badge">Our Services</div>
-          <h1 className="section-title">Everything you need to<br />grow your business online</h1>
-          <p className="page-header-desc">From a simple landing page to full-scale AI automation — we build solutions that deliver real results.</p>
+          <div className="badge">Webdesign Agentur Österreich</div>
+          <h1 className="section-title">Professionelle Website<br />erstellen lassen (DACH)</h1>
+          <p className="page-header-desc">Wir entwickeln moderne, schnelle und SEO-optimierte Websites für lokale Unternehmen in Österreich und Deutschland.</p>
         </div>
       </section>
 
@@ -97,9 +101,9 @@ export default function Services() {
       {/* How It Works */}
       <section className="svc-process">
         <div className="container">
-          <div className="badge">How It Works</div>
-          <h2 className="section-title">From first call to launch</h2>
-          <p className="svc-process-subtitle">Pricing is tailored to your project scope. Here's how we get started.</p>
+          <div className="badge">So arbeiten wir</div>
+          <h2 className="section-title">Transparente Website-Erstellung</h2>
+          <p className="svc-process-subtitle">Persönliche Betreuung für Kunden in Österreich & Deutschland.</p>
           <div className="svc-process-grid">
             <div className="svc-process-step">
               <div className="svc-step-number">01</div>

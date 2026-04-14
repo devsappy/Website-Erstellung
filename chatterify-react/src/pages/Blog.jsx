@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom'
 import blogPosts from '../data/blogPosts'
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Blog() {
+  usePageTitle('Blog — Insights zu Webdesign & KI', {
+    description: 'Expertenratgeber, Vergleiche und Strategien für den DACH-Markt — von Chatbot-Implementierung bis Webentwicklungskosten.',
+    path: '/blogs',
+  });
   const featured = blogPosts[0]
   const rest = blogPosts.slice(1)
 

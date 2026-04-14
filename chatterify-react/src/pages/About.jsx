@@ -1,13 +1,19 @@
+import { Link } from 'react-router-dom';
 import teamImage from '../assets/team-image.png'
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function About() {
+  usePageTitle('Über uns — Ihre Webdesign Agentur', {
+    description: 'Lernen Sie Chatterify kennen — Ihre Webdesign Agentur für Österreich und Deutschland. Wir verbinden innovatives Webdesign mit KI-Automatisierung für Ihren digitalen Erfolg.',
+    path: '/about',
+  });
   return (
     <>
       <section className="page-header about-hero">
         <div className="container">
-          <div className="badge">About Us</div>
-          <h1 className="section-title">Bridging AI and<br />practical business<br />solutions</h1>
-          <p className="page-header-desc">Chatterify is a modern technology startup focused on helping businesses grow through intelligent digital solutions — from web development to AI automation.</p>
+          <div className="badge">Ihre Webdesign Agentur</div>
+          <h1 className="section-title">Dein Partner für<br />Website-Erstellung<br />in der DACH Region</h1>
+          <p className="page-header-desc">Wir sind eine moderne Webagentur, die sich auf hochwertiges Webdesign, SEO und Website-Erstellung für Unternehmen in Österreich und Deutschland spezialisiert hat.</p>
         </div>
       </section>
 
@@ -31,7 +37,7 @@ export default function About() {
           <h2 className="section-title">What sets us<br />apart</h2>
           <div className="values-grid">
             <div className="value-card">
-              <div className="value-icon"><i className="fa-solid fa-indian-rupee-sign"></i></div>
+              <div className="value-icon"><i className="fa-solid fa-euro-sign"></i></div>
               <h3>Affordable Pricing</h3>
               <p>Tailored for startups and small businesses — get professional solutions without breaking the bank.</p>
             </div>
@@ -128,9 +134,9 @@ export default function About() {
 
       <section className="about-cta">
         <div className="container about-cta-container">
-          <h2>Ready to transform your business?</h2>
-          <p>Let's discuss how Chatterify can automate, scale, and elevate your digital presence.</p>
-          <a href="/contact" className="btn btn-solid">Get In Touch</a>
+          <h2>Bereit für Ihre neue Website?</h2>
+          <p>Lass uns besprechen, wie wir durch professionelles Webdesign Ihre Online-Präsenz in Österreich und Deutschland stärken können.</p>
+          <Link to="/contact" className="btn btn-solid">Kostenloses Beratungsgespräch</Link>
         </div>
       </section>
     </>

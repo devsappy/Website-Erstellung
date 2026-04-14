@@ -1,9 +1,15 @@
 import { useParams, Link } from 'react-router-dom'
 import blogPosts from '../data/blogPosts'
+import usePageTitle from '../hooks/usePageTitle';
+import { BlogPostJsonLd, BreadcrumbJsonLd } from '../components/JsonLd';
 
 export default function BlogPost() {
   const { slug } = useParams()
   const post = blogPosts.find(p => p.slug === slug)
+  usePageTitle(post ? post.title : 'Beitrag nicht gefunden', {
+    description: post ? post.subtitle : '',
+    path: post ? `/blogs/${post.slug}` : '/blogs',
+  });
 
   if (!post) {
     return (
@@ -17,6 +23,15 @@ export default function BlogPost() {
 
   return (
     <article>
+      <BlogPostJsonLd
+        title={post.title}
+        description={post.subtitle}
+        image={post.image}
+        datePublished={post.date}
+        author={post.author}
+        url={`/blogs/${post.slug}`}
+      />
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blogs' }, { name: post.title, path: `/blogs/${post.slug}` }]} />
       <section className="blog-post-hero">
         <div className="container">
           <Link to="/blogs" className="blog-post-back"><i className="fa-solid fa-arrow-left"></i> Zurück zum Blog</Link>

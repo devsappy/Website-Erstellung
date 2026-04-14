@@ -1,8 +1,20 @@
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
+import { ServiceJsonLd, BreadcrumbJsonLd } from '../components/JsonLd';
 
 export default function AIChatbots() {
+  usePageTitle('AI Chatbot Integration', {
+    description: 'Intelligente KI-Chatbots für automatisierten Kundensupport. 24/7 verfügbar auf WhatsApp, Messenger und Ihrer Website — für Unternehmen in Österreich und Deutschland.',
+    path: '/ai-chatbots',
+  });
   return (
     <>
+      <ServiceJsonLd
+        name="AI Chatbot Integration"
+        description="Intelligente Chatbots für automatisierten Kundensupport und Lead-Generierung auf allen Plattformen."
+        url="/ai-chatbots"
+      />
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }, { name: 'AI Chatbots', path: '/ai-chatbots' }]} />
       <section className="page-header">
         <div className="container">
           <Link to="/" onClick={() => setTimeout(() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="back-link"><i className="fa-solid fa-arrow-left"></i> Back to Services</Link>

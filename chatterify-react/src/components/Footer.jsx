@@ -34,7 +34,7 @@ export default function Footer() {
               <li><Link to="/web-development">Web Development</Link></li>
               <li><Link to="/ai-chatbots">AI Chatbot Integration</Link></li>
               <li><Link to="/voice-agents">AI Voice Agents</Link></li>
-              <li><Link to="/services">All Templates</Link></li>
+              <li><Link to="/templates">All Templates</Link></li>
             </ul>
           </div>
 

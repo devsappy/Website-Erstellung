@@ -1,22 +1,34 @@
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
+import { ServiceJsonLd, BreadcrumbJsonLd } from '../components/JsonLd';
 
 export default function WebDevelopment() {
+  usePageTitle('Webdesign & Website-Erstellung', {
+    description: 'Professionelles Webdesign und Website-Erstellung für Unternehmen in Österreich und Deutschland. SEO-optimiert, responsive, skalierbar — von Landingpages bis E-Commerce.',
+    path: '/web-development',
+  });
   return (
     <>
+      <ServiceJsonLd
+        name="Premium Webdesign & Website-Erstellung"
+        description="Individuelle, responsive und SEO-optimierte Websites für Unternehmen in Österreich und Deutschland."
+        url="/web-development"
+      />
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }, { name: 'Webdesign', path: '/web-development' }]} />
       <section className="page-header">
         <div className="container">
           <Link to="/" onClick={() => setTimeout(() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="back-link"><i className="fa-solid fa-arrow-left"></i> Back to Services</Link>
           <div className="badge">Our Core Solution</div>
-          <h1 className="section-title">Full-Stack<br />Web Development</h1>
-          <p className="page-header-desc">We engineer custom, highly responsive, and infinitely scalable web platforms. From dynamic landing pages to complex e-commerce architectures, we build your digital foundation.</p>
+          <h1 className="section-title">Webdesign &<br />Website-Erstellung</h1>
+          <p className="page-header-desc">Wir entwickeln maßgeschneiderte, hochgradig responsive und skalierbare Websites für Kunden in Österreich und Deutschland. Von SEO-optimierten Landingpages bis hin zu komplexen E-Commerce Webshops (DACH).</p>
         </div>
       </section>
 
       {/* Business Benefits */}
       <section className="benefits-section">
         <div className="container">
-          <div className="badge">Why It Matters</div>
-          <h2 className="section-title mb-6">How modern web development drives ROI</h2>
+          <div className="badge">Agentur Qualität</div>
+          <h2 className="section-title mb-6">Wie lokales Webdesign Ihren Umsatz steigert</h2>
           <div className="benefits-list">
             <div className="benefit-row">
               <div className="benefit-icon-wrapper"><i className="fa-solid fa-rocket"></i></div>
@@ -128,8 +140,8 @@ export default function WebDevelopment() {
         <div className="container">
           <div className="badge">The Process</div>
           <div className="experience-header">
-            <h2 className="section-title">How we bring your<br />vision to life</h2>
-            <p className="section-desc">A completely transparent, professional development cycle. You own the code, you own the IP.</p>
+            <h2 className="section-title">So erstellen wir<br />Ihre neue Website</h2>
+            <p className="section-desc">Ein transparenter Agentur-Prozess in der DACH-Region. Sie erhalten erstklassiges Webdesign aus Österreich & Deutschland.</p>
           </div>
           <div className="process-grid">
             <div className="process-card">

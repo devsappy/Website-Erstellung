@@ -1,32 +1,54 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setMenuOpen(false);
   };
+
+  // Close menu on route change / resize past mobile
+  useEffect(() => {
+    const close = () => { if (window.innerWidth > 768) setMenuOpen(false); };
+    window.addEventListener('resize', close);
+    return () => window.removeEventListener('resize', close);
+  }, []);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   return (
     <header className="navbar">
-      <div className="container nav-container">
+      <div className="nav-container" style={{ padding: '0 40px', width: '100%' }}>
         <Link to="/" className="logo" onClick={handleScrollTop}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="9" height="9" rx="1" fill="#111"/>
-            <rect x="2" y="13" width="9" height="9" rx="1" fill="#111"/>
-            <rect x="13" y="13" width="9" height="9" rx="1" fill="#111"/>
-            <path d="M13 3C13 2.44772 13.4477 2 14 2H21C21.5523 2 22 2.44772 22 3V10C22 10.5523 21.5523 11 21 11H14C13.4477 11 13 10.5523 13 10V3Z" fill="#111"/>
-          </svg>
-          <span>Chatterify</span>
+          <span className="michroma-regular">Website-Erstellung</span>
         </Link>
-        <nav className="nav-links">
+        <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
           <Link to="/" onClick={handleScrollTop}>Home</Link>
           <Link to="/blogs" onClick={handleScrollTop}>Blogs</Link>
           <Link to="/about" onClick={handleScrollTop}>About Us</Link>
           <Link to="/services" onClick={handleScrollTop}>Services</Link>
           <Link to="/templates" onClick={handleScrollTop}>Templates</Link>
           <Link to="/contact" onClick={handleScrollTop}>Contact</Link>
+          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid nav-mobile-cta" onClick={() => setMenuOpen(false)}>Book a Call</a>
         </nav>
-        <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Book a Call</a>
+        <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid nav-desktop-cta">Book a Call</a>
+        <button
+          className={`hamburger ${menuOpen ? 'hamburger-active' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span className="hamburger-line" />
+          <span className="hamburger-line" />
+          <span className="hamburger-line" />
+        </button>
       </div>
     </header>
-  )
+  );
 }

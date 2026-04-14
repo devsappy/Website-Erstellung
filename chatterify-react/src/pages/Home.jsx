@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import blogPosts from '../data/blogPosts';
+import usePageTitle from '../hooks/usePageTitle';
 
 const testimonials = [
   {
@@ -27,6 +28,7 @@ const testimonials = [
 ];
 
 export default function Home() {
+  usePageTitle(null, { path: '/' });
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   useEffect(() => {
@@ -43,13 +45,11 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-container">
           <div className="hero-image-wrapper" style={{ display: 'flex', gap: '4px', alignItems: 'center', width: 'auto', background: 'transparent', overflow: 'visible', right: '0' }}>
-            <img src="/logo.png" alt="Chatterify" style={{ width: '100%', maxWidth: '280px', height: 'auto', objectFit: 'contain', marginRight: '-50px' }} />
-            <span style={{ fontSize: '28px', color: 'var(--text-secondary)', fontWeight: '400', fontFamily: 'serif', transform: 'translateY(10px)' }}>&amp;</span>
-            <img src="/partner-logo.png" alt="Partner OS" style={{ width: '100%', maxWidth: '220px', height: 'auto', objectFit: 'contain' }} />
+            <img src="/home_logo.png" alt="Chatterify" style={{ width: '100%', maxWidth: '500px', height: 'auto', objectFit: 'contain' }} />
           </div>
-          <h1 className="hero-title">Intelligent<br />Digital<br />Solutions</h1>
+          <h1 className="hero-title">Professionelles<br />Webdesign<br />(DACH)</h1>
           <div className="hero-subtitle">
-            <p>We help businesses grow<br />with full-stack development,<br />AI chatbots, voice agents<br />&amp; creative media.</p>
+            <p>Maßgeschneiderte Website-Erstellung,<br />SEO-optimierte Webentwicklung und<br />KI-Lösungen für Unternehmen in<br />Österreich und Deutschland.</p>
           </div>
         </div>
       </section>
@@ -60,8 +60,8 @@ export default function Home() {
         <div className="container">
           <div className="badge">About Chatterify</div>
           <div className="about-header">
-            <h2 className="section-title">Making advanced technology<br />accessible to every business</h2>
-            <p className="section-desc">We bridge the gap between AI technologies<br />and practical business solutions.</p>
+            <h2 className="section-title">Ihre Webdesign Agentur für<br />Österreich & Deutschland</h2>
+            <p className="section-desc">Wir verbinden innovatives Webdesign mit leistungsstarker<br />Technologie für Ihren digitalen Erfolg.</p>
           </div>
           <div className="about-content">
             <div className="about-image-card">
@@ -88,14 +88,14 @@ export default function Home() {
         <div className="container services-container">
           <div className="services-left">
             <div className="badge">Our Services</div>
-            <h2 className="section-title">End-to-end digital<br />solutions for modern<br />businesses</h2>
-            <p>From web development to AI automation, we deliver high-quality solutions at affordable prices.</p>
+            <h2 className="section-title">Website erstellen lassen:<br />Lösungen für moderne<br />Unternehmen</h2>
+            <p>Von der professionellen Website-Erstellung bis zur KI-Automatisierung — wir liefern Webdesign auf Agenturniveau in der gesamten DACH-Region.</p>
             <Link to="/services" className="btn btn-solid mt-6">View Packages</Link>
           </div>
           <div className="services-grid">
             <Link to="/web-development" className="service-card dark-card highlight-card" style={{ gridColumn: 'span 2' }}>
-              <h3>Full-Stack<br />Web Development</h3>
-              <p>Custom, responsive and scalable websites — landing pages, business sites, e-commerce and web applications. Built with modern frameworks and optimized for speed, security and SEO from day one.</p>
+              <h3>Premium Webdesign<br />&amp; Website-Erstellung</h3>
+              <p>Individuelle, responsive und SEO-optimierte Websites. Egal ob Landingpage, Unternehmenswebsite oder E-Commerce — wir sind Ihre Webentwickler für Österreich und Deutschland.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '12px' }}>
                 <span style={{ padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>React</span>
                 <span style={{ padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>Node.js</span>

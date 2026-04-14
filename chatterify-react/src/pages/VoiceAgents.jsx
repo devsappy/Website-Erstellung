@@ -1,8 +1,20 @@
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
+import { ServiceJsonLd, BreadcrumbJsonLd } from '../components/JsonLd';
 
 export default function VoiceAgents() {
+  usePageTitle('AI Voice Agents', {
+    description: 'KI-gestützte Voice Agents für eingehende und ausgehende Anrufe. Terminbuchung, FAQ-Handling und mehrsprachiger Support für Unternehmen im DACH-Raum.',
+    path: '/voice-agents',
+  });
   return (
     <>
+      <ServiceJsonLd
+        name="AI Voice Agents"
+        description="KI-gestützte Sprachautomatisierung für eingehende und ausgehende Anrufe mit Terminbuchung."
+        url="/voice-agents"
+      />
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }, { name: 'Voice Agents', path: '/voice-agents' }]} />
       <section className="page-header">
         <div className="container">
           <Link to="/" onClick={() => setTimeout(() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="back-link"><i className="fa-solid fa-arrow-left"></i> Back to Services</Link>
