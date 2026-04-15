@@ -9,48 +9,48 @@ const services = [
     title: 'Webdesign & Website-Erstellung',
     subtitle: 'SEO & Webentwickler DACH',
     description: 'Hochwertiges Webdesign, responsive Firmen-Websites und Online-Shops (E-Commerce) für Kunden aus Österreich und Deutschland.',
-    features: ['React / Next.js', 'Responsive Design', 'SEO Optimized', 'API Integration', 'Performance Tuned', 'Secure & Scalable'],
+    features: ['React / Next.js', 'Responsive Design', 'SEO-optimiert', 'API-Integration', 'Performance-optimiert', 'Sicher & Skalierbar'],
     link: '/web-development',
   },
   {
     icon: 'fa-solid fa-robot',
     title: 'AI Chatbots',
-    subtitle: 'Smart Automation',
-    description: 'Intelligent chatbots trained on your business data that automate customer support, capture leads and boost engagement 24/7.',
-    features: ['Custom Training', 'Multi-Platform', 'Lead Capture', 'CRM Sync', 'WhatsApp & Social', 'Analytics Dashboard'],
+    subtitle: 'Intelligente Automatisierung',
+    description: 'Intelligente Chatbots, die auf Ihre Geschäftsdaten trainiert sind und den Kundensupport automatisieren, Leads erfassen und die Interaktion rund um die Uhr steigern.',
+    features: ['Individuelles Training', 'Multi-Plattform', 'Lead-Erfassung', 'CRM-Sync', 'WhatsApp & Social', 'Analytics-Dashboard'],
     link: '/ai-chatbots',
   },
   {
     icon: 'fa-solid fa-headset',
     title: 'Voice Agents',
-    subtitle: 'Call Automation',
-    description: 'AI-powered voice systems that handle inbound and outbound calls, qualify leads and integrate with your business workflows.',
-    features: ['Call Handling', 'Lead Qualification', 'CRM Integration', 'Custom Scripts', 'Multi-Language', 'Real-Time Analytics'],
+    subtitle: 'Anruf-Automatisierung',
+    description: 'KI-gestützte Sprachsysteme für eingehende und ausgehende Anrufe, Lead-Qualifizierung und nahtlose Integration in Ihre Geschäftsprozesse.',
+    features: ['Anrufannahme', 'Lead-Qualifizierung', 'CRM-Integration', 'Individuelle Skripte', 'Mehrsprachig', 'Echtzeit-Analytik'],
     link: '/voice-agents',
   },
 ];
 
 const faqs = [
   {
-    q: 'How long does a typical project take?',
-    a: 'Timelines depend on scope. A landing page takes 3-5 days, a business website 1-2 weeks, and custom applications 4-8 weeks. We provide a clear timeline after the discovery call.',
+    q: 'Wie lange dauert ein typisches Projekt?',
+    a: 'Die Dauer hängt vom Umfang ab. Eine Landingpage dauert 3–5 Tage, eine Unternehmenswebsite 1–2 Wochen und individuelle Anwendungen 4–8 Wochen. Nach dem Erstgespräch erhalten Sie einen klaren Zeitplan.',
   },
   {
-    q: 'Do you offer post-launch support?',
-    a: 'Yes. All packages include post-launch support. The duration depends on the package tier and is discussed during the introductory meeting.',
+    q: 'Bieten Sie Support nach dem Launch an?',
+    a: 'Ja. Alle Pakete beinhalten Post-Launch-Support. Die Dauer hängt von der Paketstufe ab und wird beim Erstgespräch besprochen.',
   },
   {
-    q: 'Can I upgrade my package later?',
-    a: 'Absolutely. You can start with Starter and upgrade anytime. We credit your existing investment toward the upgraded package.',
+    q: 'Kann ich mein Paket später upgraden?',
+    a: 'Selbstverständlich. Sie können mit dem Starter-Paket beginnen und jederzeit upgraden. Ihre bisherige Investition wird auf das neue Paket angerechnet.',
   },
   {
-    q: 'What technologies do you use?',
-    a: 'We use modern, battle-tested technologies including React, Next.js, Node.js, Python, PostgreSQL, MongoDB, AWS and more. We choose the best stack for your specific needs.',
+    q: 'Welche Technologien verwenden Sie?',
+    a: 'Wir setzen auf moderne, bewährte Technologien wie React, Next.js, Node.js, Python, PostgreSQL, MongoDB, AWS und mehr. Wir wählen den besten Stack für Ihre spezifischen Anforderungen.',
   },
 ];
 
 export default function Services() {
-  usePageTitle('Services — Website-Erstellung & KI-Lösungen', {
+  usePageTitle('Leistungen — Website-Erstellung & KI-Lösungen', {
     description: 'Professionelle Website erstellen lassen für Österreich und Deutschland. Webdesign, AI Chatbots, Voice Agents und Automation — alle Pakete und Preise.',
     path: '/services',
   });
@@ -59,7 +59,7 @@ export default function Services() {
   return (
     <>
       <FaqJsonLd items={faqs} />
-      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]} />
+      <BreadcrumbJsonLd items={[{ name: 'Startseite', path: '/' }, { name: 'Leistungen', path: '/services' }]} />
       {/* Hero */}
       <section className="page-header">
         <div className="container">
@@ -90,7 +90,7 @@ export default function Services() {
                   ))}
                 </ul>
                 <span className="svc-learn-more">
-                  Explore service <i className="fa-solid fa-arrow-right"></i>
+                  Leistung ansehen <i className="fa-solid fa-arrow-right"></i>
                 </span>
               </Link>
             ))}
@@ -107,27 +107,27 @@ export default function Services() {
           <div className="svc-process-grid">
             <div className="svc-process-step">
               <div className="svc-step-number">01</div>
-              <h3>Discovery Call</h3>
-              <p>We discuss your business goals, requirements and timeline to understand exactly what you need.</p>
+              <h3>Erstgespräch</h3>
+              <p>Wir besprechen Ihre Unternehmensziele, Anforderungen und den Zeitplan, um genau zu verstehen, was Sie brauchen.</p>
             </div>
             <div className="svc-process-step">
               <div className="svc-step-number">02</div>
-              <h3>Custom Proposal</h3>
-              <p>You receive a detailed scope, timeline and pricing tailored to your project — no generic quotes.</p>
+              <h3>Individuelles Angebot</h3>
+              <p>Sie erhalten einen detaillierten Umfang, Zeitplan und Preis — maßgeschneidert für Ihr Projekt, ohne Standardangebote.</p>
             </div>
             <div className="svc-process-step">
               <div className="svc-step-number">03</div>
-              <h3>Build & Review</h3>
-              <p>We design and develop your solution with regular check-ins so you're always in the loop.</p>
+              <h3>Umsetzung &amp; Review</h3>
+              <p>Wir designen und entwickeln Ihre Lösung mit regelmäßigen Abstimmungen, damit Sie stets auf dem Laufenden sind.</p>
             </div>
             <div className="svc-process-step">
               <div className="svc-step-number">04</div>
-              <h3>Launch & Support</h3>
-              <p>We deploy your project and provide ongoing support to make sure everything runs smoothly.</p>
+              <h3>Launch &amp; Support</h3>
+              <p>Wir stellen Ihr Projekt live und bieten laufenden Support, damit alles reibungslos funktioniert.</p>
             </div>
           </div>
           <div className="svc-process-cta">
-            <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Book a Free Discovery Call</a>
+            <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Kostenloses Erstgespräch buchen</a>
           </div>
         </div>
       </section>
@@ -138,19 +138,19 @@ export default function Services() {
           <div className="svc-trust-grid">
             <div className="svc-trust-item">
               <h3>5+</h3>
-              <p>Projects Delivered</p>
+              <p>Projekte ausgeliefert</p>
             </div>
             <div className="svc-trust-item">
               <h3>100%</h3>
-              <p>On-Time Delivery</p>
+              <p>Pünktliche Lieferung</p>
             </div>
             <div className="svc-trust-item">
               <h3>24/7</h3>
-              <p>AI-Powered Support</p>
+              <p>KI-gestützter Support</p>
             </div>
             <div className="svc-trust-item">
               <h3>80%+</h3>
-              <p>Client Satisfaction</p>
+              <p>Kundenzufriedenheit</p>
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function Services() {
       <section className="svc-faq">
         <div className="container">
           <div className="badge">FAQ</div>
-          <h2 className="section-title">Frequently asked questions</h2>
+          <h2 className="section-title">Häufig gestellte Fragen</h2>
           <div className="svc-faq-list">
             {faqs.map((faq, idx) => (
               <div

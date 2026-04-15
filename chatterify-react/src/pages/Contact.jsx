@@ -39,8 +39,8 @@ export default function Contact() {
     <>
       <section className="page-header">
         <div className="container">
-          <h1 className="section-title">Let's build something great</h1>
-          <p className="page-header-desc">Have a project in mind or want to learn more about our services? Reach out — we'd love to help you grow your business with smart digital solutions.</p>
+          <h1 className="section-title">Gestalten wir etwas Großartiges</h1>
+          <p className="page-header-desc">Haben Sie ein Projekt im Kopf oder möchten Sie mehr über unsere Leistungen erfahren? Kontaktieren Sie uns — wir helfen Ihnen gerne dabei, Ihr Unternehmen mit smarten digitalen Lösungen weiterzubringen.</p>
         </div>
       </section>
 
@@ -50,29 +50,28 @@ export default function Contact() {
             <div className="contact-info-card">
               <div className="contact-info-icon"><i className="fa-solid fa-envelope"></i></div>
               <div className="contact-info-content">
-                <h3>Email</h3>
+                <h3>E-Mail</h3>
                 <p>hello@chatterify.in</p>
               </div>
             </div>
             <div className="contact-info-card">
               <div className="contact-info-icon"><i className="fa-solid fa-globe"></i></div>
               <div className="contact-info-content">
-                <h3>Website</h3>
-                <p>chatterify.in</p>
+                <h3>Website</h3>                <p>chatterify.in</p>
               </div>
             </div>
             <div className="contact-info-card">
               <div className="contact-info-icon"><i className="fa-solid fa-clock"></i></div>
               <div className="contact-info-content">
-                <h3>Response Time</h3>
-                <p>Within 24 hours</p>
+                <h3>Antwortzeit</h3>
+                <p>Innerhalb von 24 Stunden</p>
               </div>
             </div>
           </div>
 
           <div className="contact-form-wrapper">
-            <h2>Tell us about your project</h2>
-            <p className="form-subtitle">Fill out the form below and our team will get back to you within 24 hours.</p>
+            <h2>Erzählen Sie uns von Ihrem Projekt</h2>
+            <p className="form-subtitle">Füllen Sie das Formular aus und unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.</p>
 
             {status === 'success' && (
               <div className="form-success-msg">
@@ -89,45 +88,45 @@ export default function Contact() {
               <input type="hidden" name="subject" value="Neue Kontaktanfrage — Chatterify Website" />
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="first-name">First Name</label>
-                  <input type="text" id="first-name" name="first-name" placeholder="Your first name" required />
+                  <label htmlFor="first-name">Vorname</label>
+                  <input type="text" id="first-name" name="first-name" placeholder="Ihr Vorname" required />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="last-name">Last Name</label>
-                  <input type="text" id="last-name" name="last-name" placeholder="Your last name" required />
+                  <label htmlFor="last-name">Nachname</label>
+                  <input type="text" id="last-name" name="last-name" placeholder="Ihr Nachname" required />
                 </div>
               </div>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="you@company.com" required />
+                  <label htmlFor="email">E-Mail-Adresse</label>
+                  <input type="email" id="email" name="email" placeholder="sie@firma.at" required />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phone">Phone Number</label>
+                  <label htmlFor="phone">Telefonnummer</label>
                   <input type="tel" id="phone" name="phone" placeholder="+43 XXX XXXXXXX" />
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="service">Service Interested In</label>
+                <label htmlFor="service">Gewünschte Leistung</label>
                 <select id="service" name="service" defaultValue="" required>
-                  <option value="" disabled>Select a service</option>
-                  <option value="web-dev">Web Development</option>
-                  <option value="chatbot">AI Chatbot Integration</option>
-                  <option value="voice-agent">AI Voice Agents</option>
-                  <option value="automation">Business Automation</option>
-                  <option value="hosting">Website Hosting</option>
-                  <option value="starter">Starter Package</option>
-                  <option value="business">Business Package</option>
-                  <option value="premium">Premium Package</option>
-                  <option value="other">Other</option>
+                  <option value="" disabled>Bitte wählen Sie eine Leistung</option>
+                  <option value="web-dev">Webentwicklung</option>
+                  <option value="chatbot">KI-Chatbot-Integration</option>
+                  <option value="voice-agent">KI-Voice Agents</option>
+                  <option value="automation">Geschäftsautomatisierung</option>
+                  <option value="hosting">Webhosting</option>
+                  <option value="starter">Starter-Paket</option>
+                  <option value="business">Business-Paket</option>
+                  <option value="premium">Premium-Paket</option>
+                  <option value="other">Sonstiges</option>
                 </select>
               </div>
               <div className="form-group">
-                <label htmlFor="message">Project Details</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, timeline and budget..." required></textarea>
+                <label htmlFor="message">Projektdetails</label>
+                <textarea id="message" name="message" rows="5" placeholder="Erzählen Sie uns von Ihrem Projekt, Ihren Zielen, dem Zeitplan und dem Budget..." required></textarea>
               </div>
               <button type="submit" className="btn btn-solid btn-full" disabled={status === 'sending'}>
-                {status === 'sending' ? 'Sending...' : 'Send Message'} <i className="fa-solid fa-paper-plane"></i>
+                {status === 'sending' ? 'Wird gesendet...' : 'Nachricht senden'} <i className="fa-solid fa-paper-plane"></i>
               </button>
             </form>
           </div>
@@ -136,7 +135,7 @@ export default function Contact() {
 
       <section className="contact-social">
         <div className="container">
-          <h2 className="section-title">Find us online</h2>
+          <h2 className="section-title">Finden Sie uns online</h2>
           <div className="social-cards">
             <a href="#" className="social-card">
               <i className="fa-brands fa-instagram"></i>

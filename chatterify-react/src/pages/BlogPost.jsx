@@ -31,7 +31,7 @@ export default function BlogPost() {
         author={post.author}
         url={`/blogs/${post.slug}`}
       />
-      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blogs' }, { name: post.title, path: `/blogs/${post.slug}` }]} />
+      <BreadcrumbJsonLd items={[{ name: 'Startseite', path: '/' }, { name: 'Blog', path: '/blogs' }, { name: post.title, path: `/blogs/${post.slug}` }]} />
       <section className="blog-post-hero">
         <div className="container">
           <Link to="/blogs" className="blog-post-back"><i className="fa-solid fa-arrow-left"></i> Zurück zum Blog</Link>

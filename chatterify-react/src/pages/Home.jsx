@@ -6,24 +6,24 @@ import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 
 const testimonials = [
   {
-    quote1: "Chatterify transformed the way we handle customer interactions. Their AI chatbot handles 80% of our queries automatically, saving us hours every week.",
-    quote2: "The team was responsive, transparent and delivered beyond expectations. Their web development and automation services are top-notch — highly recommended for any startup.",
-    name: "Satisfied Client",
-    title: "Startup Founder",
+    quote1: "Chatterify hat unsere Kundenkommunikation komplett verändert. Der KI-Chatbot bearbeitet 80 % unserer Anfragen automatisch und spart uns jede Woche Stunden an Arbeit.",
+    quote2: "Das Team war reaktionsschnell, transparent und hat unsere Erwartungen übertroffen. Die Webentwicklung und Automatisierung sind erstklassig — uneingeschränkt empfohlen für jedes Startup.",
+    name: "Zufriedene Kundin",
+    title: "Startup-Gründerin",
     image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=crop&w=100&q=80"
   },
   {
-    quote1: "Working with Chatterify on our premium e-commerce site was flawless. They nailed the design, and the custom checkout flow they built increased our conversion rate overnight.",
-    quote2: "We're extremely pleased with the modern stack performance. It's lightning-fast and our mobile users love it.",
+    quote1: "Die Zusammenarbeit mit Chatterify für unseren Premium-Onlineshop war reibungslos. Das Design sitzt perfekt, und der individuelle Checkout-Prozess hat unsere Conversion-Rate über Nacht gesteigert.",
+    quote2: "Wir sind extrem zufrieden mit der Performance des modernen Stacks. Die Seite ist blitzschnell und unsere mobilen Nutzer:innen lieben sie.",
     name: "Alex Mercer",
-    title: "E-Commerce Director",
+    title: "E-Commerce-Leiter",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&q=80"
   },
   {
-    quote1: "The AI Voice agent they deployed for our sales team is basically a 24/7 SDR. It books meetings, answers FAQs, and qualifies leads exactly as trained without taking a break.",
-    quote2: "If you're looking for genuine AI automation that delivers ROI rather than an expensive gimmick, Chatterify is the right choice.",
+    quote1: "Der KI-Voice-Agent, den sie für unser Vertriebsteam eingesetzt haben, ist im Grunde ein 24/7-Vertriebsmitarbeiter. Er bucht Termine, beantwortet FAQs und qualifiziert Leads genau wie trainiert — ohne Pause.",
+    quote2: "Wenn Sie echte KI-Automatisierung suchen, die echten ROI liefert statt nur ein teures Gadget zu sein, ist Chatterify die richtige Wahl.",
     name: "Sarah Jenkins",
-    title: "VP of Sales",
+    title: "Vertriebsleiterin",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80"
   }
 ];
@@ -110,7 +110,7 @@ export default function Home() {
 
       <section className="about">
         <div className="container">
-          <div className="badge">About Chatterify</div>
+          <div className="badge">Über Chatterify</div>
           <div className="about-header">
             <h2 className="section-title">Ihre Webdesign Agentur für<br />Österreich & Deutschland</h2>
             <p className="section-desc">Wir verbinden innovatives Webdesign mit leistungsstarker<br />Technologie für Ihren digitalen Erfolg.</p>
@@ -133,7 +133,7 @@ export default function Home() {
                   onPlay={() => setVideoPlaying(true)}
                   onPause={() => setVideoPlaying(false)}
                   onEnded={() => setVideoPlaying(false)}
-                  aria-label="Chatterify team at work"
+                  aria-label="Chatterify-Team bei der Arbeit"
                 >
                   <source src="/about-video.webm" type="video/webm" />
                   <source src="/about-video.mp4" type="video/mp4" />
@@ -141,7 +141,7 @@ export default function Home() {
               ) : (
                 <img
                   src="/about-video-poster.jpg"
-                  alt="Chatterify team at work"
+                  alt="Chatterify-Team bei der Arbeit"
                   className="about-video"
                   loading="lazy"
                   decoding="async"
@@ -151,7 +151,7 @@ export default function Home() {
                 type="button"
                 className="play-btn"
                 onClick={(e) => { e.stopPropagation(); toggleVideo(); }}
-                aria-label={videoPlaying ? 'Pause video' : 'Play video'}
+                  aria-label={videoPlaying ? 'Video pausieren' : 'Video abspielen'}
               >
                 <i className={`fa-solid ${videoPlaying ? 'fa-pause' : 'fa-play'}`}></i>
               </button>
@@ -159,11 +159,11 @@ export default function Home() {
             <div className="about-stats">
               <div className="stat-item">
                 <h3>5+</h3>
-                <p>Projects delivered with cutting-edge technology and dedicated support</p>
+                <p>5+ Projekte mit modernster Technologie und engagierter Betreuung umgesetzt</p>
               </div>
               <div className="stat-item">
                 <h3>80%</h3>
-                <p>Client satisfaction rate — we prioritize quality, transparency and results</p>
+                <p>Kundenzufriedenheit — wir priorisieren Qualität, Transparenz und Ergebnisse</p>
               </div>
             </div>
           </div>
@@ -173,10 +173,10 @@ export default function Home() {
       <section className="services" id="services">
         <div className="container services-container">
           <div className="services-left">
-            <div className="badge">Our Services</div>
+            <div className="badge">Unsere Leistungen</div>
             <h2 className="section-title">Website erstellen lassen:<br />Lösungen für moderne<br />Unternehmen</h2>
             <p>Von der professionellen Website-Erstellung bis zur KI-Automatisierung — wir liefern Webdesign auf Agenturniveau in der gesamten DACH-Region.</p>
-            <Link to="/services" className="btn btn-solid mt-6">View Packages</Link>
+            <Link to="/services" className="btn btn-solid mt-6">Pakete ansehen</Link>
           </div>
           <div className="services-grid">
             <Link to="/web-development" className="service-card dark-card highlight-card" style={{ gridColumn: 'span 2' }}>
@@ -193,13 +193,13 @@ export default function Home() {
               <i className="fa-solid fa-arrow-up-right-from-square icon-arrow"></i>
             </Link>
             <Link to="/ai-chatbots" className="service-card light-card">
-              <h3>AI Chatbot<br />Integration</h3>
-              <p>Smart chatbots that automate customer support, answer queries and boost engagement across your platforms.</p>
+              <h3>KI-Chatbot<br />Integration</h3>
+              <p>Intelligente Chatbots, die Ihren Kundensupport automatisieren, Anfragen beantworten und die Interaktion auf allen Plattformen steigern.</p>
               <i className="fa-solid fa-arrow-right icon-arrow"></i>
             </Link>
             <Link to="/voice-agents" className="service-card light-card">
-              <h3>AI Voice<br />Agents</h3>
-              <p>Voice automation systems that handle calls, assist customers and integrate seamlessly with your business workflows.</p>
+              <h3>KI-Voice<br />Agents</h3>
+              <p>Sprachautomatisierung für eingehende und ausgehende Anrufe, die Kunden assistiert und sich nahtlos in Ihre Geschäftsprozesse integriert.</p>
               <i className="fa-solid fa-arrow-right icon-arrow"></i>
             </Link>
 
@@ -209,10 +209,10 @@ export default function Home() {
 
       <section className="experience">
         <div className="container">
-          <div className="badge">Our Approach</div>
+          <div className="badge">Unser Ansatz</div>
           <div className="experience-header">
-            <h2 className="section-title">How we deliver<br />results for your business</h2>
-            <p className="section-desc">Our step-by-step process ensures transparent<br />communication, fast turnaround and<br />high-quality outcomes.</p>
+            <h2 className="section-title">Wie wir Ergebnisse<br />für Ihr Unternehmen liefern</h2>
+            <p className="section-desc">Unser schrittweiser Prozess sorgt für transparente<br />Kommunikation, schnelle Umsetzung und<br />hochwertige Ergebnisse.</p>
           </div>
           <div className="experience-stack">
             <ScrollStack useWindowScroll itemDistance={16} itemStackDistance={20} stackPosition="22%" baseScale={0.88}>
@@ -279,16 +279,16 @@ export default function Home() {
 
       <section className="explore-section">
         <div className="container">
-          <div className="badge">Explore</div>
+          <div className="badge">Entdecken</div>
           <div className="explore-header">
-            <h2 className="section-title">Check out our work<br />&amp; latest insights</h2>
+            <h2 className="section-title">Unsere Projekte &<br />aktuelle Insights</h2>
           </div>
 
           {/* Templates Samples */}
           <div className="explore-block">
             <div className="explore-block-top">
-              <h3>Our Templates</h3>
-              <Link to="/templates" className="explore-view-all">View all <i className="fa-solid fa-arrow-right"></i></Link>
+              <h3>Unsere Templates</h3>
+              <Link to="/templates" className="explore-view-all">Alle ansehen <i className="fa-solid fa-arrow-right"></i></Link>
             </div>
             <div className="explore-samples-grid">
               {[
@@ -310,7 +310,7 @@ export default function Home() {
                 </div>
               ))}
               <Link to="/templates" className="explore-view-all-card">
-                <span>View all templates</span>
+                <span>Alle Templates ansehen</span>
                 <i className="fa-solid fa-arrow-right"></i>
               </Link>
             </div>
@@ -319,8 +319,8 @@ export default function Home() {
           {/* Blog Samples */}
           <div className="explore-block">
             <div className="explore-block-top">
-              <h3>Latest Blogs</h3>
-              <Link to="/blogs" className="explore-view-all">View all <i className="fa-solid fa-arrow-right"></i></Link>
+              <h3>Aktuelle Blogbeiträge</h3>
+              <Link to="/blogs" className="explore-view-all">Alle ansehen <i className="fa-solid fa-arrow-right"></i></Link>
             </div>
             <div className="explore-samples-grid">
               {blogPosts.slice(0, 3).map((post) => (
@@ -335,7 +335,7 @@ export default function Home() {
                 </Link>
               ))}
               <Link to="/blogs" className="explore-view-all-card">
-                <span>View all blogs</span>
+                <span>Alle Blogbeiträge ansehen</span>
                 <i className="fa-solid fa-arrow-right"></i>
               </Link>
             </div>
@@ -383,7 +383,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="showcase-open-btn"
                 >
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i> Open
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i> Öffnen
                 </a>
                 <button className="showcase-close-btn" onClick={() => setActiveSample(null)}>
                   <i className="fa-solid fa-xmark"></i>

@@ -30,16 +30,16 @@ export default function Navbar() {
         </Link>
         <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
           <div className="nav-mobile-links">
-            <Link to="/" onClick={handleScrollTop}><span>Home</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
-            <Link to="/blogs" onClick={handleScrollTop}><span>Blogs</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
-            <Link to="/about" onClick={handleScrollTop}><span>About Us</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
-            <Link to="/services" onClick={handleScrollTop}><span>Services</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/" onClick={handleScrollTop}><span>Startseite</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/blogs" onClick={handleScrollTop}><span>Blog</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/about" onClick={handleScrollTop}><span>Über uns</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/services" onClick={handleScrollTop}><span>Leistungen</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
             <Link to="/templates" onClick={handleScrollTop}><span>Templates</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
-            <Link to="/contact" onClick={handleScrollTop}><span>Contact</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/contact" onClick={handleScrollTop}><span>Kontakt</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
           </div>
-          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid nav-mobile-cta" onClick={() => setMenuOpen(false)}>Book a Call</a>
+          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid nav-mobile-cta" onClick={() => setMenuOpen(false)}>Gespräch buchen</a>
         </nav>
-        <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid nav-desktop-cta">Book a Call</a>
+        <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid nav-desktop-cta">Gespräch buchen</a>
         <button
           className={`hamburger ${menuOpen ? 'hamburger-active' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}

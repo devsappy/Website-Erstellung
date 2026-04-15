@@ -15,8 +15,8 @@ export default function Blog() {
       <section className="page-header">
         <div className="container">
           <div className="badge">Blog</div>
-          <h1 className="section-title">Insights on AI,<br />automation &amp; digital growth</h1>
-          <p className="page-header-desc">Expert guides, comparisons and strategies for the DACH market — from chatbot implementation to web development costs.</p>
+          <h1 className="section-title">Insights zu KI,<br />Automatisierung &amp;<br />digitalem Wachstum</h1>
+          <p className="page-header-desc">Expertenratgeber, Vergleiche und Strategien für den DACH-Markt — von Chatbot-Implementierung bis Webentwicklungskosten.</p>
         </div>
       </section>
 

@@ -14,11 +14,11 @@ export default function WebDevelopment() {
         description="Individuelle, responsive und SEO-optimierte Websites für Unternehmen in Österreich und Deutschland."
         url="/web-development"
       />
-      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }, { name: 'Webdesign', path: '/web-development' }]} />
+      <BreadcrumbJsonLd items={[{ name: 'Startseite', path: '/' }, { name: 'Leistungen', path: '/services' }, { name: 'Webdesign', path: '/web-development' }]} />
       <section className="page-header">
         <div className="container">
-          <Link to="/" onClick={() => setTimeout(() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="back-link"><i className="fa-solid fa-arrow-left"></i> Back to Services</Link>
-          <div className="badge">Our Core Solution</div>
+          <Link to="/" onClick={() => setTimeout(() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="back-link"><i className="fa-solid fa-arrow-left"></i> Zurück zu den Leistungen</Link>
+          <div className="badge">Unsere Kernleistung</div>
           <h1 className="section-title">Webdesign &<br />Website-Erstellung</h1>
           <p className="page-header-desc">Wir entwickeln maßgeschneiderte, hochgradig responsive und skalierbare Websites für Kunden in Österreich und Deutschland. Von SEO-optimierten Landingpages bis hin zu komplexen E-Commerce Webshops (DACH).</p>
         </div>
@@ -33,29 +33,29 @@ export default function WebDevelopment() {
             <div className="benefit-row">
               <div className="benefit-icon-wrapper"><i className="fa-solid fa-rocket"></i></div>
               <div className="benefit-content">
-                <h3>Higher Conversions</h3>
-                <p>Lightning-fast load times and seamless UX paths dramatically reduce bounce rates and turn casual visitors into paying customers.</p>
+                <h3>Höhere Conversions</h3>
+                <p>Blitzschnelle Ladezeiten und nahtlose UX-Pfade senken die Absprungrate drastisch und machen aus Gelegenheitsbesucher:innen zahlende Kund:innen.</p>
               </div>
             </div>
             <div className="benefit-row">
               <div className="benefit-icon-wrapper"><i className="fa-solid fa-shield-halved"></i></div>
               <div className="benefit-content">
-                <h3>Enterprise Security</h3>
-                <p>Advanced data encryption, secure authentication, and robust infrastructure defend your business from cyber threats.</p>
+                <h3>Unternehmenssicherheit</h3>
+                <p>Fortschrittliche Datenverschlüsselung, sichere Authentifizierung und robuste Infrastruktur schützen Ihr Unternehmen vor Cyber-Bedrohungen.</p>
               </div>
             </div>
             <div className="benefit-row">
               <div className="benefit-icon-wrapper"><i className="fa-solid fa-chart-line"></i></div>
               <div className="benefit-content">
-                <h3>Scalable Infrastructure</h3>
-                <p>Your web app scales automatically. Whether you have 100 or 100,000 active users, the performance remains flawless without downtime.</p>
+                <h3>Skalierbare Infrastruktur</h3>
+                <p>Ihre Web-App skaliert automatisch. Ob 100 oder 100.000 aktive Nutzer:innen — die Leistung bleibt fehlerfrei ohne Ausfallzeiten.</p>
               </div>
             </div>
             <div className="benefit-row">
               <div className="benefit-icon-wrapper"><i className="fa-solid fa-gears"></i></div>
               <div className="benefit-content">
-                <h3>Automated Operations</h3>
-                <p>We build sophisticated CMS, inventory, and payment gateways that eliminate manual operational tasks, saving you hours every week.</p>
+                <h3>Automatisierte Abläufe</h3>
+                <p>Wir bauen durchdachte CMS-, Inventar- und Zahlungs-Gateways, die manuelle Aufgaben eliminieren und Ihnen jede Woche Stunden sparen.</p>
               </div>
             </div>
           </div>
@@ -65,14 +65,14 @@ export default function WebDevelopment() {
       {/* Tech Stack Grid */}
       <section className="tech-stack-section">
         <div className="container">
-          <div className="badge">Our Arsenal</div>
-          <h2 className="section-title">We leverage all possible tech stacks</h2>
-          <p className="page-header-desc">We don't believe in one-size-fits-all. We analyze your core business logic and apply the perfect technology stack to guarantee speed, security, and scalability.</p>
+          <div className="badge">Unser Werkzeugkasten</div>
+          <h2 className="section-title">Wir nutzen alle gängigen Technologie-Stacks</h2>
+          <p className="page-header-desc">Wir glauben nicht an One-Size-fits-All. Wir analysieren Ihre Kern-Logik und wenden den perfekten Technologie-Stack an, um Geschwindigkeit, Sicherheit und Skalierbarkeit zu garantieren.</p>
           
           <div className="tech-grid">
             {/* Frontend */}
             <div className="tech-category">
-              <h3>Frontend & UI</h3>
+              <h3>Frontend &amp; UI</h3>
               <div className="tech-list">
                 <div className="tech-item"><i className="fa-brands fa-react"></i><span>React.js</span></div>
                 <div className="tech-item"><i className="fa-brands fa-vuejs"></i><span>Vue.js</span></div>
@@ -85,7 +85,7 @@ export default function WebDevelopment() {
 
             {/* Backend */}
             <div className="tech-category">
-              <h3>Backend & Logic</h3>
+              <h3>Backend &amp; Logik</h3>
               <div className="tech-list">
                 <div className="tech-item"><i className="fa-brands fa-node-js"></i><span>Node.js</span></div>
                 <div className="tech-item"><i className="fa-brands fa-python"></i><span>Python / Django</span></div>
@@ -98,7 +98,7 @@ export default function WebDevelopment() {
 
             {/* DB & Cloud */}
             <div className="tech-category">
-              <h3>Databases & Cloud</h3>
+              <h3>Datenbanken &amp; Cloud</h3>
               <div className="tech-list">
                 <div className="tech-item"><i className="fa-brands fa-aws"></i><span>Amazon AWS</span></div>
                 <div className="tech-item"><i className="fa-brands fa-docker"></i><span>Docker</span></div>
@@ -119,7 +119,7 @@ export default function WebDevelopment() {
 
             {/* Integrations & AI */}
             <div className="tech-category">
-              <h3>Integrations & AI</h3>
+              <h3>Integrationen &amp; KI</h3>
               <div className="tech-list">
                 <div className="tech-item"><i className="fa-brands fa-stripe"></i><span>Stripe APIs</span></div>
                 <div className="tech-item"><i className="fa-brands fa-hubspot"></i><span>HubSpot CRM</span></div>
@@ -138,7 +138,7 @@ export default function WebDevelopment() {
       {/* Lifecycle / Process Workflow */}
       <section className="process-workflow">
         <div className="container">
-          <div className="badge">The Process</div>
+          <div className="badge">Der Prozess</div>
           <div className="experience-header">
             <h2 className="section-title">So erstellen wir<br />Ihre neue Website</h2>
             <p className="section-desc">Ein transparenter Agentur-Prozess in der DACH-Region. Sie erhalten erstklassiges Webdesign aus Österreich & Deutschland.</p>
@@ -146,23 +146,23 @@ export default function WebDevelopment() {
           <div className="process-grid">
             <div className="process-card">
               <div className="process-number">01</div>
-              <h3>Technical Scoping</h3>
-              <p>We work intimately with you to define all requirements, user stories, and design the ultimate database architectures before writing any code.</p>
+              <h3>Technische Analyse</h3>
+              <p>Wir arbeiten eng mit Ihnen zusammen, um alle Anforderungen, User Stories und die optimale Datenbankarchitektur zu definieren — bevor eine Zeile Code geschrieben wird.</p>
             </div>
             <div className="process-card">
               <div className="process-number">02</div>
-              <h3>UI/UX Prototyping</h3>
-              <p>We deliver high-fidelity, interactive Figma designs so you can see exactly how the product will look and feel on all devices prior to development.</p>
+              <h3>UI/UX-Prototyping</h3>
+              <p>Wir liefern hochdetaillierte, interaktive Figma-Designs, damit Sie genau sehen, wie das Produkt auf allen Geräten aussehen wird.</p>
             </div>
             <div className="process-card">
               <div className="process-number">03</div>
-              <h3>Agile Development</h3>
-              <p>Our engineers build your frontend and backend infrastructure rapidly using modern sprints, securely plugging in any AI or third-party APIs.</p>
+              <h3>Agile Entwicklung</h3>
+              <p>Unsere Entwickler:innen bauen Ihr Frontend und Backend mit modernen Sprints — und integrieren KI- oder Drittanbieter-APIs sicher.</p>
             </div>
             <div className="process-card">
               <div className="process-number">04</div>
-              <h3>QA & Deployment</h3>
-              <p>We subject the app to heavy load-testing, security audits, and QA, finalizing it with a zero-downtime deployment to your production servers.</p>
+              <h3>QA &amp; Bereitstellung</h3>
+              <p>Wir testen die App intensiv unter Last, führen Sicherheitsaudits durch und stellen sie mit Zero-Downtime-Deployment auf Ihren Produktionsservern live.</p>
             </div>
           </div>
         </div>
@@ -170,9 +170,9 @@ export default function WebDevelopment() {
 
       <section className="about-cta">
         <div className="container about-cta-container">
-          <h2>Pricing Details</h2>
-          <p>Every web project has unique architectural requirements. Pricing and project roadmaps will be discussed and finalized after a thorough introductory meeting.</p>
-          <Link to="/contact" className="btn btn-solid mt-4">Schedule a Technical Call</Link>
+          <h2>Preisdetails</h2>
+          <p>Jedes Webprojekt hat einzigartige architektonische Anforderungen. Preisgestaltung und Projekt-Roadmaps werden nach einem ausführlichen Erstgespräch besprochen und festgelegt.</p>
+          <Link to="/contact" className="btn btn-solid mt-4">Technisches Gespräch vereinbaren</Link>
         </div>
       </section>
     </>

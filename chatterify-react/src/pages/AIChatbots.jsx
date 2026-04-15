@@ -14,39 +14,39 @@ export default function AIChatbots() {
         description="Intelligente Chatbots für automatisierten Kundensupport und Lead-Generierung auf allen Plattformen."
         url="/ai-chatbots"
       />
-      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }, { name: 'AI Chatbots', path: '/ai-chatbots' }]} />
+      <BreadcrumbJsonLd items={[{ name: 'Startseite', path: '/' }, { name: 'Leistungen', path: '/services' }, { name: 'KI-Chatbots', path: '/ai-chatbots' }]} />
       <section className="page-header">
         <div className="container">
-          <Link to="/" onClick={() => setTimeout(() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="back-link"><i className="fa-solid fa-arrow-left"></i> Back to Services</Link>
-          <div className="badge">Service</div>
-          <h1 className="section-title">AI Chatbot<br />Integration</h1>
-          <p className="page-header-desc">Automate your customer support, answer queries instantly, and boost engagement 24/7 across all your platforms.</p>
+          <Link to="/" onClick={() => setTimeout(() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="back-link"><i className="fa-solid fa-arrow-left"></i> Zurück zu den Leistungen</Link>
+          <div className="badge">Leistung</div>
+          <h1 className="section-title">KI-Chatbot<br />Integration</h1>
+          <p className="page-header-desc">Automatisieren Sie Ihren Kundensupport, beantworten Sie Anfragen sofort und steigern Sie die Interaktion rund um die Uhr auf allen Plattformen.</p>
         </div>
       </section>
 
       <section className="about-values">
         <div className="container">
-          <h2 className="section-title mb-6">Smart Automation</h2>
+          <h2 className="section-title mb-6">Intelligente Automatisierung</h2>
           <div className="values-grid">
             <div className="value-card">
               <div className="value-icon"><i className="fa-solid fa-clock"></i></div>
-              <h3>24/7 Availability</h3>
-              <p>Never miss a lead. Your chatbot interacts with customers around the clock with zero downtime.</p>
+              <h3>24/7 Verfügbarkeit</h3>
+              <p>Verpassen Sie keinen Lead mehr. Ihr Chatbot interagiert rund um die Uhr mit Kunden — ohne Ausfallzeiten.</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><i className="fa-solid fa-brain"></i></div>
-              <h3>Context-Aware AI</h3>
-              <p>Trained on your business data to provide relevant, highly accurate, human-like responses.</p>
+              <h3>Kontextbewusste KI</h3>
+              <p>Auf Ihre Geschäftsdaten trainiert für relevante, hochgradig genaue und menschlich wirkende Antworten.</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><i className="fa-brands fa-whatsapp"></i></div>
-              <h3>Multi-Platform</h3>
-              <p>Seamlessly integrate the chatbot into your website, WhatsApp, Facebook Messenger, and Instagram.</p>
+              <h3>Multi-Plattform</h3>
+              <p>Nahtlose Integration des Chatbots in Ihre Website, WhatsApp, Facebook Messenger und Instagram.</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><i className="fa-solid fa-chart-line"></i></div>
-              <h3>Lead Generation</h3>
-              <p>Automatically qualify leads, gather contact information, and sync directly with your CRM.</p>
+              <h3>Lead-Generierung</h3>
+              <p>Automatische Lead-Qualifizierung, Kontaktdatenerfassung und direkte Synchronisation mit Ihrem CRM.</p>
             </div>
           </div>
         </div>
@@ -54,9 +54,9 @@ export default function AIChatbots() {
 
       <section className="about-cta">
         <div className="container about-cta-container">
-          <h2>Pricing Details</h2>
-          <p>Chatbot capabilities vary based on logic complexity and integrations. Pricing will be discussed after an introductory meeting.</p>
-          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid mt-4">Book a Consultation</a>
+          <h2>Preisdetails</h2>
+          <p>Chatbot-Funktionen variieren je nach Logik-Komplexität und Integrationen. Die Preisgestaltung wird nach einem Erstgespräch besprochen.</p>
+          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid mt-4">Beratung buchen</a>
         </div>
       </section>
     </>

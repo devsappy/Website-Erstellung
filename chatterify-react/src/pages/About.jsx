@@ -23,38 +23,38 @@ export default function About() {
             <img src={teamImage} alt="Chatterify Team" />
           </div>
           <div className="about-story-text">
-            <h2>Our Story</h2>
-            <p>Chatterify was born from a simple idea: advanced technology shouldn't be reserved for big enterprises. Startups, creators, and growing businesses deserve access to the same powerful tools — at prices that make sense.</p>
-            <p>We combine full-stack web development, AI chatbot integration, voice automation, and creative media services under one roof. Our mission is to deliver high-quality digital and AI-powered solutions that are affordable, scalable, and genuinely useful.</p>
-            <p>With a small but skilled team of developers, strategists, and creatives, we work closely with every client to understand their unique challenges and deliver solutions that drive real results.</p>
+            <h2>Unsere Geschichte</h2>
+            <p>Chatterify entstand aus einer einfachen Idee: fortschrittliche Technologie sollte nicht nur Großunternehmen vorbehalten sein. Startups, Kreative und wachsende Unternehmen verdienen Zugang zu denselben leistungsstarken Werkzeugen — zu Preisen, die Sinn ergeben.</p>
+            <p>Wir vereinen Full-Stack-Webentwicklung, KI-Chatbot-Integration, Sprachautomatisierung und kreative Mediendienstleistungen unter einem Dach. Unsere Mission ist es, hochwertige digitale und KI-gestützte Lösungen zu liefern, die bezahlbar, skalierbar und genuinely nützlich sind.</p>
+            <p>Mit einem kleinen, aber kompetenten Team aus Entwickler:innen, Strateg:innen und Kreativen arbeiten wir eng mit jedem Kunden zusammen, um deren individuelle Herausforderungen zu verstehen und Lösungen zu liefern, die echte Ergebnisse bringen.</p>
           </div>
         </div>
       </section>
 
       <section className="about-values">
         <div className="container">
-          <div className="badge">Why Chatterify</div>
-          <h2 className="section-title">What sets us<br />apart</h2>
+          <div className="badge">Warum Chatterify</div>
+          <h2 className="section-title">Was uns<br />auszeichnet</h2>
           <div className="values-grid">
             <div className="value-card">
               <div className="value-icon"><i className="fa-solid fa-euro-sign"></i></div>
-              <h3>Affordable Pricing</h3>
-              <p>Tailored for startups and small businesses — get professional solutions without breaking the bank.</p>
+              <h3>Faire Preise</h3>
+              <p>Mit Fokus auf Startups und Kleinunternehmen — professionelle Lösungen, die Ihr Budget nicht sprengen.</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><i className="fa-solid fa-bolt"></i></div>
-              <h3>Fast Turnaround</h3>
-              <p>We deliver quickly with transparent processes, keeping you informed at every step of the project.</p>
+              <h3>Schnelle Umsetzung</h3>
+              <p>Wir liefern zügig mit transparenten Prozessen und halten Sie über jeden Projektschritt am Laufenden.</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><i className="fa-solid fa-robot"></i></div>
-              <h3>AI-First Approach</h3>
-              <p>We leverage chatbots, voice agents and agentic AI to automate workflows and enhance customer experience.</p>
+              <h3>KI-zuerst-Ansatz</h3>
+              <p>Wir setzen Chatbots, Voice Agents und Agent AI ein, um Workflows zu automatisieren und die Kundenerfahrung zu verbessern.</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><i className="fa-solid fa-shield-halved"></i></div>
-              <h3>End-to-End Solutions</h3>
-              <p>From development and hosting to maintenance and support — we handle everything so you can focus on growth.</p>
+              <h3>Komplettlösungen</h3>
+              <p>Von Entwicklung und Hosting bis Wartung und Support — wir kümmern uns um alles, damit Sie sich auf Ihr Wachstum konzentrieren können.</p>
             </div>
           </div>
         </div>
@@ -62,45 +62,45 @@ export default function About() {
 
       <section className="about-skills">
         <div className="container">
-          <div className="badge">Our Expertise</div>
-          <h2 className="section-title">Technologies &amp;<br />capabilities we cover</h2>
+          <div className="badge">Unsere Expertise</div>
+          <h2 className="section-title">Technologien &amp;<br />Fähigkeiten</h2>
           <div className="skills-grid">
             <div className="skill-category">
               <div className="skill-icon"><i className="fa-solid fa-code"></i></div>
               <div>
-                <h3>Development</h3>
+                <h3>Entwicklung</h3>
                 <div className="skill-tags">
-                  <span className="skill-tag">Full-Stack Web Dev</span>
-                  <span className="skill-tag">Landing Pages</span>
+                  <span className="skill-tag">Full-Stack Webentwicklung</span>
+                  <span className="skill-tag">Landingpages</span>
                   <span className="skill-tag">E-Commerce</span>
-                  <span className="skill-tag">Custom Web Apps</span>
-                  <span className="skill-tag">API Development</span>
-                  <span className="skill-tag">Database Solutions</span>
+                  <span className="skill-tag">Individuelle Web-Apps</span>
+                  <span className="skill-tag">API-Entwicklung</span>
+                  <span className="skill-tag">Datenbanklösungen</span>
                 </div>
               </div>
             </div>
             <div className="skill-category">
               <div className="skill-icon"><i className="fa-solid fa-robot"></i></div>
               <div>
-                <h3>AI &amp; Automation</h3>
+                <h3>KI &amp; Automatisierung</h3>
                 <div className="skill-tags">
-                  <span className="skill-tag">AI Chatbots</span>
+                  <span className="skill-tag">KI-Chatbots</span>
                   <span className="skill-tag">Voice Agents</span>
-                  <span className="skill-tag">Agentic AI</span>
-                  <span className="skill-tag">Workflow Automation</span>
-                  <span className="skill-tag">Business Process AI</span>
+                  <span className="skill-tag">Agent AI</span>
+                  <span className="skill-tag">Workflow-Automatisierung</span>
+                  <span className="skill-tag">Geschäftsprozess-KI</span>
                 </div>
               </div>
             </div>
             <div className="skill-category">
               <div className="skill-icon"><i className="fa-solid fa-server"></i></div>
               <div>
-                <h3>Infrastructure</h3>
+                <h3>Infrastruktur</h3>
                 <div className="skill-tags">
-                  <span className="skill-tag">Website Hosting</span>
+                  <span className="skill-tag">Webhosting</span>
                   <span className="skill-tag">SSL &amp; CDN</span>
-                  <span className="skill-tag">Server Monitoring</span>
-                  <span className="skill-tag">Maintenance</span>
+                  <span className="skill-tag">Server-Monitoring</span>
+                  <span className="skill-tag">Wartung</span>
                   <span className="skill-tag">24/7 Support</span>
                 </div>
               </div>
@@ -114,19 +114,19 @@ export default function About() {
           <div className="numbers-grid">
             <div className="number-item">
               <h3>5+</h3>
-              <p>Projects Completed</p>
+              <p>Projekte abgeschlossen</p>
             </div>
             <div className="number-item">
               <h3>80%</h3>
-              <p>Client Satisfaction</p>
+              <p>Kundenzufriedenheit</p>
             </div>
             <div className="number-item">
               <h3>50+</h3>
-              <p>Active Users</p>
+              <p>Aktive Nutzer:innen</p>
             </div>
             <div className="number-item">
               <h3>8</h3>
-              <p>Core Services</p>
+              <p>Kernleistungen</p>
             </div>
           </div>
         </div>
