@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const BASE = 'Chatterify';
+const BASE = 'Website-Erstellung';
 const SITE_URL = 'https://chatterify.in';
 const DEFAULT_DESC = 'Ihre Webdesign Agentur für Österreich & Deutschland. Professionelle Website-Erstellung, SEO-optimierte Webentwicklung, KI-Chatbots und Voice Agents für Unternehmen im DACH-Raum.';
 
@@ -18,7 +18,7 @@ export default function usePageTitle(title, options = {}) {
     // Title
     document.title = title
       ? `${title} — ${BASE}`
-      : `${BASE} — Professionelles Webdesign & Website-Erstellung (DACH)`;
+      : BASE;
 
     // Meta description
     const desc = description || DEFAULT_DESC;
