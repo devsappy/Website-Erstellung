@@ -33,6 +33,12 @@ export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
+  const [activeSample, setActiveSample] = useState(null);
+
+  useEffect(() => {
+    document.body.style.overflow = activeSample ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [activeSample]);
   const videoRef = useRef(null);
   const videoCardRef = useRef(null);
 
@@ -286,16 +292,22 @@ export default function Home() {
             </div>
             <div className="explore-samples-grid">
               {[
-                { title: 'Aset AI', url: 'https://aset-six.vercel.app' },
-                { title: 'Anon Store', url: 'https://anon-demo.vercel.app' },
-                { title: 'ChatFlow', url: 'https://landing-page-for-ve.vercel.app' },
+                { title: 'Crunchbox', url: 'https://crunchbox-eight.vercel.app' },
+                { title: 'Wander PH', url: 'https://wander-ph.vercel.app' },
+                { title: 'StudioType', url: 'https://studiotype.vercel.app' },
               ].map((item) => (
-                <Link to="/templates" className="explore-sample-card" key={item.title}>
+                <div
+                  className="explore-sample-card"
+                  key={item.title}
+                  onClick={() => setActiveSample(item)}
+                  role="button"
+                  tabIndex={0}
+                >
                   <div className="explore-sample-preview">
                     <iframe src={item.url} title={item.title} loading="lazy" tabIndex={-1} />
                   </div>
                   <span className="explore-sample-title">{item.title}</span>
-                </Link>
+                </div>
               ))}
               <Link to="/templates" className="explore-view-all-card">
                 <span>View all templates</span>
@@ -356,6 +368,38 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {activeSample && (
+        <div className="showcase-modal-backdrop" onClick={() => setActiveSample(null)}>
+          <div className="showcase-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="showcase-modal-header">
+              <div className="showcase-modal-title">
+                <h3>{activeSample.title}</h3>
+              </div>
+              <div className="showcase-modal-actions">
+                <a
+                  href={activeSample.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="showcase-open-btn"
+                >
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i> Open
+                </a>
+                <button className="showcase-close-btn" onClick={() => setActiveSample(null)}>
+                  <i className="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div className="showcase-modal-body">
+              <iframe
+                src={activeSample.url}
+                title={activeSample.title}
+                className="showcase-iframe"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

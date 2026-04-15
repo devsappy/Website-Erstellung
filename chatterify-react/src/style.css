@@ -2388,13 +2388,14 @@ p {
     border-radius: 20px;
     padding: 40px 32px;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .process-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* very subtle */
+    box-shadow: 0 22px 50px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .process-number {
@@ -2939,7 +2940,7 @@ select option {
         grid-template-areas:
             "title image"
             "subtitle subtitle" !important;
-        column-gap: 16px;
+        column-gap: clamp(16px, 5vw, 32px);
         row-gap: 20px;
         align-items: center;
     }
@@ -2967,8 +2968,8 @@ select option {
         top: 0 !important;
         right: auto !important;
         left: auto !important;
-        width: auto !important;
-        max-width: 130px !important;
+        width: clamp(80px, 28vw, 160px) !important;
+        max-width: 160px !important;
         height: auto !important;
         margin: 0 !important;
         order: 0 !important;
@@ -3124,7 +3125,7 @@ select option {
 
     /* Showcase modal */
     .showcase-modal-backdrop { padding: 12px; }
-    .showcase-modal { height: calc(100vh - 24px); }
+    .showcase-modal { height: 80vh; max-height: calc(100vh - 24px); }
     .showcase-modal-title h3 { font-size: 14px; }
     .showcase-modal-url { font-size: 12px; }
     .showcase-open-btn { padding: 6px 12px; font-size: 12px; }
@@ -3164,8 +3165,8 @@ select option {
     .section-title { font-size: 26px; }
     .page-header .section-title { font-size: 28px; }
     .hero-title { font-size: 28px !important; }
-    .hero-image-wrapper { max-width: 100px !important; }
-    .hero-container { column-gap: 12px; }
+    .hero-image-wrapper { width: clamp(70px, 24vw, 110px) !important; max-width: 110px !important; }
+    .hero-container { column-gap: clamp(14px, 5vw, 24px) !important; }
 
     .stat-item h3 { font-size: 28px; }
     .about-image-card { height: 200px; }
