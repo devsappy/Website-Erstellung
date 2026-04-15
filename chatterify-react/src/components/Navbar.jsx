@@ -11,7 +11,7 @@ export default function Navbar() {
 
   // Close menu on route change / resize past mobile
   useEffect(() => {
-    const close = () => { if (window.innerWidth > 1024) setMenuOpen(false); };
+    const close = () => { if (window.innerWidth > 1100) setMenuOpen(false); };
     window.addEventListener('resize', close);
     return () => window.removeEventListener('resize', close);
   }, []);
