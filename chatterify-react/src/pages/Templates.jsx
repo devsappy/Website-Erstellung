@@ -4,6 +4,20 @@ import usePageTitle from '../hooks/usePageTitle';
 
 const projects = [
   {
+    id: -1,
+    title: 'ChatFlow',
+    description: 'AI-powered customer support platform designed to streamline and automate customer interactions.',
+    tags: ['SaaS', 'AI', 'Customer Support'],
+    url: 'https://landing-page-for-ve.vercel.app',
+  },
+  {
+    id: 0,
+    title: 'Matias — Creative Designer',
+    description: 'Portfolio website for a creative visual designer showcasing work, services and brand identity.',
+    tags: ['Portfolio', 'Creative', 'Design'],
+    url: 'https://agencyowner-demo.vercel.app',
+  },
+  {
     id: 1,
     title: 'Aset AI',
     description: 'Landing page for an AI-powered platform showcasing intelligent automation capabilities and services.',
@@ -33,38 +47,24 @@ const projects = [
   },
   {
     id: 5,
-    title: 'CollabTrack',
-    description: 'A task and progress management platform designed for creative teams to organize and track projects.',
-    tags: ['SaaS', 'Project Management', 'Dashboard'],
-    url: 'https://collab-tracker.vercel.app',
-  },
-  {
-    id: 6,
-    title: 'Buzball',
-    description: 'Vibrant e-commerce site for a ready-to-drink cocktail brand with product showcase and ordering.',
-    tags: ['E-Commerce', 'Beverage', 'Brand'],
-    url: 'https://buzzball-demo.vercel.app',
-  },
-  {
-    id: 7,
     title: 'Anon Store',
     description: 'Minimal e-commerce platform with a clean shopping experience, product listings and checkout flow.',
     tags: ['E-Commerce', 'Minimal', 'Store'],
     url: 'https://anon-demo.vercel.app',
   },
   {
-    id: 8,
-    title: 'Matias — Creative Designer',
-    description: 'Portfolio website for a creative visual designer showcasing work, services and brand identity.',
-    tags: ['Portfolio', 'Creative', 'Design'],
-    url: 'https://agencyowner-demo.vercel.app',
+    id: 7,
+    title: 'Buzball',
+    description: 'Vibrant e-commerce site for a ready-to-drink cocktail brand with product showcase and ordering.',
+    tags: ['E-Commerce', 'Beverage', 'Brand'],
+    url: 'https://buzzball-demo.vercel.app',
   },
   {
-    id: 9,
-    title: 'ChatFlow',
-    description: 'AI-powered customer support platform designed to streamline and automate customer interactions.',
-    tags: ['SaaS', 'AI', 'Customer Support'],
-    url: 'https://landing-page-for-ve.vercel.app',
+    id: 8,
+    title: 'CollabTrack',
+    description: 'A task and progress management platform designed for creative teams to organize and track projects.',
+    tags: ['SaaS', 'Project Management', 'Dashboard'],
+    url: 'https://collab-tracker.vercel.app',
   },
 ];
 

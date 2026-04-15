@@ -177,8 +177,8 @@ export default function Home() {
             <div className="explore-samples-grid">
               {[
                 { title: 'Aset AI', url: 'https://aset-six.vercel.app' },
-                { title: 'CollabTrack', url: 'https://collab-tracker.vercel.app' },
-                { title: 'Matias — Creative Designer', url: 'https://agencyowner-demo.vercel.app' },
+                { title: 'Anon Store', url: 'https://anon-demo.vercel.app' },
+                { title: 'ChatFlow', url: 'https://landing-page-for-ve.vercel.app' },
               ].map((item) => (
                 <Link to="/templates" className="explore-sample-card" key={item.title}>
                   <div className="explore-sample-preview">

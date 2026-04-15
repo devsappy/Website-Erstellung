@@ -209,7 +209,7 @@ p {
 
 .hero-image-wrapper {
     position: absolute;
-    top: 0;
+    top: -60px;
     right: 40px;
     width: 260px;
     height: 320px;
@@ -1054,6 +1054,8 @@ p {
 
 .blog-tag {
     display: inline-block;
+    align-self: flex-start;
+    width: fit-content;
     padding: 6px 14px;
     border: 1px solid var(--border-color);
     border-radius: 20px;
