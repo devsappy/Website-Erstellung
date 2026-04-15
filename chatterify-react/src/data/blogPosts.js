@@ -1,3 +1,8 @@
+const r_star = `<svg width="18" height="18" viewBox="0 0 24 24" fill="#ffb400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
+const s5 = `<div style="display:flex;gap:2px">${r_star.repeat(5)}</div>`;
+const s4 = `<div style="display:flex;gap:2px">${r_star.repeat(4)}</div>`;
+const s3 = `<div style="display:flex;gap:2px">${r_star.repeat(3)}</div>`;
+
 const blogPosts = [
   {
     id: "custom-code-vs-page-builder-seo-ranking",
@@ -22,7 +27,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Typische Probleme von Page Builder Websites"
+        text: "Typische Probleme von Page Builder Websites"
       },
       {
         type: "paragraph",
@@ -39,7 +44,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Wie sich das auf SEO & Rankings auswirkt"
+        text: "Wie sich das auf SEO & Rankings auswirkt"
       },
       {
         type: "paragraph",
@@ -60,7 +65,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Vorteile von Custom Code (HTML/CSS/JS oder React/Next.js)"
+        text: "Vorteile von Custom Code (HTML/CSS/JS oder React/Next.js)"
       },
       {
         type: "list",
@@ -74,7 +79,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Mini Migration Story: Von Page Builder zu Custom Stack"
+        text: "Mini Migration Story: Von Page Builder zu Custom Stack"
       },
       {
         type: "table",
@@ -92,7 +97,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Wann sind Page Builder trotzdem sinnvoll?"
+        text: "Wann sind Page Builder trotzdem sinnvoll?"
       },
       {
         type: "list",
@@ -126,7 +131,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Was ist der Unterschied?"
+        text: "Was ist der Unterschied?"
       },
       {
         type: "table",
@@ -141,7 +146,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Die echten Trade-offs (Performance + SEO)"
+        text: "Die echten Trade-offs (Performance + SEO)"
       },
       {
         type: "list",
@@ -154,7 +159,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Mythos: Headless rankt automatisch besser"
+        text: "Mythos: Headless rankt automatisch besser"
       },
       {
         type: "paragraph",
@@ -162,7 +167,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Performance & Core Web Vitals im Vergleich"
+        text: "Performance & Core Web Vitals im Vergleich"
       },
       {
         type: "table",
@@ -177,7 +182,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Wann Custom Frontends wirklich glänzen"
+        text: "Wann Custom Frontends wirklich glänzen"
       },
       {
         type: "list",
@@ -191,7 +196,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Beispiel: Migration von Shopify Theme → Headless"
+        text: "Beispiel: Migration von Shopify Theme → Headless"
       },
       {
         type: "table",
@@ -209,7 +214,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Fazit: Es geht nicht um Technologie – sondern um Umsetzung"
+        text: "Fazit: Es geht nicht um Technologie – sondern um Umsetzung"
       },
       {
         type: "list",
@@ -247,7 +252,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Warum lokales SEO im DACH-Markt entscheidend ist"
+        text: "Warum lokales SEO im DACH-Markt entscheidend ist"
       },
       {
         type: "paragraph",
@@ -269,7 +274,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Lokale Rankingfaktoren im DACH-SEO"
+        text: "Lokale Rankingfaktoren im DACH-SEO"
       },
       {
         type: "list",
@@ -286,7 +291,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Grenzen von Shopify Themes & Standard-Setups"
+        text: "Grenzen von Shopify Themes & Standard-Setups"
       },
       {
         type: "paragraph",
@@ -340,7 +345,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Warum Custom Stacks hier klar gewinnen"
+        text: "Warum Custom Stacks hier klar gewinnen"
       },
       {
         type: "paragraph",
@@ -404,7 +409,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Praxisbeispiel: Multi-Region Migration"
+        text: "Praxisbeispiel: Multi-Region Migration"
       },
       {
         type: "table",
@@ -420,7 +425,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Architektur & Komponenten"
+        text: "Architektur & Komponenten"
       },
       {
         type: "paragraph",
@@ -437,7 +442,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Wann Themes trotzdem sinnvoll sind"
+        text: "Wann Themes trotzdem sinnvoll sind"
       },
       {
         type: "list",
@@ -449,7 +454,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: " Fazit: Geo-SEO braucht mehr als Templates"
+        text: "Fazit: Geo-SEO braucht mehr als Templates"
       },
       {
         type: "paragraph",
@@ -484,7 +489,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F310} Die wichtigsten globalen Webdesign-Trends 2026"
+        text: "Die wichtigsten globalen Webdesign-Trends 2026"
       },
       {
         type: "heading",
@@ -548,7 +553,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F1E9}\u{1F1EA}\u{1F1E6}\u{1F1F9} Was im DACH-Markt wirklich funktioniert"
+        text: "Was im DACH-Markt wirklich funktioniert"
       },
       {
         type: "paragraph",
@@ -585,7 +590,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u26A1 Wie moderne Technologien Trends erm\u00F6glichen (ohne Performance-Verlust)"
+        text: "Wie moderne Technologien Trends erm\u00F6glichen (ohne Performance-Verlust)"
       },
       {
         type: "paragraph",
@@ -622,22 +627,22 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F9E0} Trend vs Realit\u00E4t: Die richtige Balance"
+        text: "Trend vs Realit\u00E4t: Die richtige Balance"
       },
       {
         type: "table",
         headers: ["Trend", "Sinnvoll f\u00FCr DE/AT?", "Empfehlung"],
         rows: [
-          ["Vibrante Farben", "\u26A0\uFE0F Teilweise", "Dezent einsetzen"],
-          ["KI-Personalisierung", "\u2705 Ja", "Besonders im E-Commerce"],
-          ["Nachhaltigkeit", "\u2705 Sehr wichtig", "Wettbewerbsvorteil"],
-          ["Accessibility", "\u2705 Pflicht", "Recht + UX"],
-          ["3D / AR", "\u26A0\uFE0F Selektiv", "Nur bei echtem Mehrwert"]
+          ["Vibrante Farben", "Teilweise", "Dezent einsetzen"],
+          ["KI-Personalisierung", "Ja", "Besonders im E-Commerce"],
+          ["Nachhaltigkeit", "Sehr wichtig", "Wettbewerbsvorteil"],
+          ["Accessibility", "Pflicht", "Recht + UX"],
+          ["3D / AR", "Selektiv", "Nur bei echtem Mehrwert"]
         ]
       },
       {
         type: "heading",
-        text: "\u{1F9EA} Beispiel: Moderner Relaunch (DACH-optimiert)"
+        text: "Beispiel: Moderner Relaunch (DACH-optimiert)"
       },
       {
         type: "table",
@@ -652,7 +657,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u2705 Webdesign-Checklist 2026 f\u00FCr DE/AT Unternehmen"
+        text: "Webdesign-Checklist 2026 f\u00FCr DE/AT Unternehmen"
       },
       {
         type: "heading",
@@ -716,7 +721,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F3C1} Fazit: Trends sind nur dann wertvoll, wenn sie funktionieren"
+        text: "Fazit: Trends sind nur dann wertvoll, wenn sie funktionieren"
       },
       {
         type: "paragraph",
@@ -751,7 +756,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F30D} Der \u00F6kologische Fu\u00DFabdruck moderner Websites"
+        text: "Der \u00F6kologische Fu\u00DFabdruck moderner Websites"
       },
       {
         type: "paragraph",
@@ -759,7 +764,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u26A0\uFE0F Hauptverursacher von digitalem CO\u2082"
+        text: "Hauptverursacher von digitalem CO\u2082"
       },
       {
         type: "list",
@@ -776,7 +781,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F4C9} Warum Nachhaltigkeit direkt SEO beeinflusst"
+        text: "Warum Nachhaltigkeit direkt SEO beeinflusst"
       },
       {
         type: "paragraph",
@@ -798,7 +803,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u2699\uFE0F Warum Themes & Plugins oft das Problem sind"
+        text: "Warum Themes & Plugins oft das Problem sind"
       },
       {
         type: "paragraph",
@@ -839,7 +844,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u26A1 Warum Custom Code nachhaltiger ist"
+        text: "Warum Custom Code nachhaltiger ist"
       },
       {
         type: "paragraph",
@@ -853,7 +858,7 @@ const blogPosts = [
         type: "list",
         items: [
           "<strong>Bilder:</strong> WebP / AVIF statt JPG/PNG, Responsive Images, Lazy Loading",
-          "Beispiel: <code>&lt;img src=\"image.webp\" loading=\"lazy\" /&gt;</code>",
+          "Beispiel: <code>&lt;img src=\"image.webp\"loading=\"lazy\" /&gt;</code>",
           "Weniger Daten = weniger Energieverbrauch"
         ]
       },
@@ -907,7 +912,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F9EA} Beispiel: Nachhaltiger Relaunch"
+        text: "Beispiel: Nachhaltiger Relaunch"
       },
       {
         type: "table",
@@ -927,7 +932,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F3D7}\uFE0F Low-Carbon Design Prinzipien (Best Practices)"
+        text: "Low-Carbon Design Prinzipien (Best Practices)"
       },
       {
         type: "list",
@@ -941,7 +946,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u2705 Low-Carbon Redesign Checklist (f\u00FCr DE/AT Unternehmen)"
+        text: "Low-Carbon Redesign Checklist (f\u00FCr DE/AT Unternehmen)"
       },
       {
         type: "heading",
@@ -950,10 +955,10 @@ const blogPosts = [
       {
         type: "list",
         items: [
-          "\u2611 Bilder in WebP/AVIF umwandeln",
-          "\u2611 Unused CSS/JS entfernen",
-          "\u2611 Lazy Loading implementieren",
-          "\u2611 Code Splitting aktivieren"
+          "Bilder in WebP/AVIF umwandeln",
+          "Unused CSS/JS entfernen",
+          "Lazy Loading implementieren",
+          "Code Splitting aktivieren"
         ]
       },
       {
@@ -963,9 +968,9 @@ const blogPosts = [
       {
         type: "list",
         items: [
-          "\u2611 Core Web Vitals optimieren",
-          "\u2611 Mobile Performance testen",
-          "\u2611 DOM-Gr\u00F6\u00DFe reduzieren"
+          "Core Web Vitals optimieren",
+          "Mobile Performance testen",
+          "DOM-Gr\u00F6\u00DFe reduzieren"
         ]
       },
       {
@@ -975,8 +980,8 @@ const blogPosts = [
       {
         type: "list",
         items: [
-          "\u2611 Third-Party Scripts reduzieren",
-          "\u2611 Server-side Tracking pr\u00FCfen"
+          "Third-Party Scripts reduzieren",
+          "Server-side Tracking pr\u00FCfen"
         ]
       },
       {
@@ -986,13 +991,13 @@ const blogPosts = [
       {
         type: "list",
         items: [
-          "\u2611 Green Hosting nutzen",
-          "\u2611 CDN & Edge optimieren"
+          "Green Hosting nutzen",
+          "CDN & Edge optimieren"
         ]
       },
       {
         type: "heading",
-        text: "\u{1F9E0} Wann Custom Code besonders sinnvoll ist"
+        text: "Wann Custom Code besonders sinnvoll ist"
       },
       {
         type: "list",
@@ -1005,7 +1010,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F3C1} Fazit: Nachhaltigkeit ist ein technischer Vorteil"
+        text: "Fazit: Nachhaltigkeit ist ein technischer Vorteil"
       },
       {
         type: "paragraph",
@@ -1040,7 +1045,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u26A1 Was sind Core Web Vitals (2026)?"
+        text: "Was sind Core Web Vitals (2026)?"
       },
       {
         type: "paragraph",
@@ -1057,7 +1062,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F4C9} Warum diese Metriken SEO & Conversion beeinflussen"
+        text: "Warum diese Metriken SEO & Conversion beeinflussen"
       },
       {
         type: "paragraph",
@@ -1065,7 +1070,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u26A0\uFE0F Warum Theme-basierte Websites oft scheitern"
+        text: "Warum Theme-basierte Websites oft scheitern"
       },
       {
         type: "paragraph",
@@ -1117,7 +1122,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F680} Wie Custom Stacks Core Web Vitals als Design-Prinzip nutzen"
+        text: "Wie Custom Stacks Core Web Vitals als Design-Prinzip nutzen"
       },
       {
         type: "paragraph",
@@ -1158,7 +1163,7 @@ const blogPosts = [
           "Formate: WebP und AVIF",
           "Responsive Images mit korrekten Srcsets",
           "Lazy Loading f\u00FCr unterhalb des Viewports",
-          "Beispiel: <code>&lt;Image src=\"/hero.avif\" priority /&gt;</code>",
+          "Beispiel: <code>&lt;Image src=\"/hero.avif\"priority /&gt;</code>",
           "Direkter Einfluss auf LCP"
         ]
       },
@@ -1189,7 +1194,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F9EA} Praxisbeispiel (DE/AT Projekt)"
+        text: "Praxisbeispiel (DE/AT Projekt)"
       },
       {
         type: "table",
@@ -1207,7 +1212,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F3AF} Core Web Vitals als Design-Prinzip denken"
+        text: "Core Web Vitals als Design-Prinzip denken"
       },
       {
         type: "paragraph",
@@ -1223,7 +1228,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u2705 Core Web Vitals Checklist (f\u00FCr DE/AT Unternehmen)"
+        text: "Core Web Vitals Checklist (f\u00FCr DE/AT Unternehmen)"
       },
       {
         type: "heading",
@@ -1232,9 +1237,9 @@ const blogPosts = [
       {
         type: "list",
         items: [
-          "\u2611 LCP < 2,5s",
-          "\u2611 INP < 200ms",
-          "\u2611 CLS < 0,1"
+          "LCP < 2,5s",
+          "INP < 200ms",
+          "CLS < 0,1"
         ]
       },
       {
@@ -1244,9 +1249,9 @@ const blogPosts = [
       {
         type: "list",
         items: [
-          "\u2611 JS minimieren",
-          "\u2611 Code Splitting nutzen",
-          "\u2611 Bilder optimieren (WebP/AVIF)"
+          "JS minimieren",
+          "Code Splitting nutzen",
+          "Bilder optimieren (WebP/AVIF)"
         ]
       },
       {
@@ -1256,9 +1261,9 @@ const blogPosts = [
       {
         type: "list",
         items: [
-          "\u2611 CDN einsetzen",
-          "\u2611 Caching aktivieren",
-          "\u2611 Edge Rendering pr\u00FCfen"
+          "CDN einsetzen",
+          "Caching aktivieren",
+          "Edge Rendering pr\u00FCfen"
         ]
       },
       {
@@ -1268,13 +1273,13 @@ const blogPosts = [
       {
         type: "list",
         items: [
-          "\u2611 Third-Party Scripts reduzieren",
-          "\u2611 Server-side Tracking nutzen"
+          "Third-Party Scripts reduzieren",
+          "Server-side Tracking nutzen"
         ]
       },
       {
         type: "heading",
-        text: "\u{1F9E0} Wann sich ein Custom Setup besonders lohnt"
+        text: "Wann sich ein Custom Setup besonders lohnt"
       },
       {
         type: "list",
@@ -1287,7 +1292,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F3C1} Fazit: Performance ist Design"
+        text: "Fazit: Performance ist Design"
       },
       {
         type: "paragraph",
@@ -1306,7 +1311,7 @@ const blogPosts = [
     tagColor: "dark",
     title: "Custom Website vs WordPress vs Shopify 2026: Was ist am besten f\u00FCr SEO & Performance in Deutschland und \u00D6sterreich?",
     subtitle: "Die Wahl der richtigen Plattform ist eine der wichtigsten Entscheidungen f\u00FCr dein Business im DACH-Markt. Sie beeinflusst SEO, Ladegeschwindigkeit, Wartungskosten und Skalierbarkeit \u2013 und zwar \u00FCber 3\u20135 Jahre hinweg.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
     author: "Chatterify × OD Solution",
     date: "5. M\u00E4rz 2026",
     readTime: "12 Min. Lesezeit",
@@ -1318,7 +1323,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F9ED} Warum die Plattformwahl langfristig entscheidend ist"
+        text: "Warum die Plattformwahl langfristig entscheidend ist"
       },
       {
         type: "list",
@@ -1331,7 +1336,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u2696\uFE0F Quick Vergleich: Custom vs WordPress vs Shopify"
+        text: "Quick Vergleich: Custom vs WordPress vs Shopify"
       },
       {
         type: "table",
@@ -1339,16 +1344,16 @@ const blogPosts = [
         rows: [
           ["Initialkosten", "Hoch", "Niedrig\u2013Mittel", "Niedrig"],
           ["Monatliche Kosten", "Mittel", "Mittel (Hosting + Plugins)", "Mittel\u2013Hoch"],
-          ["Performance", "\u2B50\u2B50\u2B50\u2B50\u2B50", "\u2B50\u2B50\u2B50", "\u2B50\u2B50\u2B50"],
-          ["SEO Kontrolle", "\u2B50\u2B50\u2B50\u2B50\u2B50", "\u2B50\u2B50\u2B50\u2B50", "\u2B50\u2B50\u2B50"],
-          ["Flexibilit\u00E4t", "\u2B50\u2B50\u2B50\u2B50\u2B50", "\u2B50\u2B50\u2B50", "\u2B50\u2B50\u2B50"],
+          ["Performance", s5, s3, s3],
+          ["SEO Kontrolle", s5, s4, s3],
+          ["Flexibilit\u00E4t", s5, s3, s3],
           ["Wartung", "Mittel", "Hoch", "Niedrig"],
           ["Ownership", "Voll", "Teilweise", "Eingeschr\u00E4nkt"]
         ]
       },
       {
         type: "heading",
-        text: "\u{1F4C9} SEO & Core Web Vitals: Der entscheidende Unterschied"
+        text: "SEO & Core Web Vitals: Der entscheidende Unterschied"
       },
       {
         type: "paragraph",
@@ -1383,7 +1388,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F4CA} Typische Performance-Unterschiede (realistisch)"
+        text: "Typische Performance-Unterschiede (realistisch)"
       },
       {
         type: "table",
@@ -1400,7 +1405,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F4B8} 5-Jahres-Kosten realistisch betrachtet"
+        text: "5-Jahres-Kosten realistisch betrachtet"
       },
       {
         type: "paragraph",
@@ -1446,7 +1451,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F3E0} Was passt f\u00FCr DE/AT Unternehmen? (Realistische Szenarien)"
+        text: "Was passt f\u00FCr DE/AT Unternehmen? (Realistische Szenarien)"
       },
       {
         type: "heading",
@@ -1494,7 +1499,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F914} Wann solltest du von WordPress/Shopify wechseln?"
+        text: "Wann solltest du von WordPress/Shopify wechseln?"
       },
       {
         type: "paragraph",
@@ -1512,7 +1517,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u26A1 Typisches Migrations-Szenario"
+        text: "Typisches Migrations-Szenario"
       },
       {
         type: "table",
@@ -1529,7 +1534,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F9E0} Fazit: Es geht nicht um die Plattform \u2013 sondern um deine Ziele"
+        text: "Fazit: Es geht nicht um die Plattform \u2013 sondern um deine Ziele"
       },
       {
         type: "list",
@@ -1568,7 +1573,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F916} Was bedeutet echte KI-Personalisierung im Jahr 2026?"
+        text: "Was bedeutet echte KI-Personalisierung im Jahr 2026?"
       },
       {
         type: "paragraph",
@@ -1593,7 +1598,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F4C8} Warum KI-Personalisierung die Conversion massiv steigert"
+        text: "Warum KI-Personalisierung die Conversion massiv steigert"
       },
       {
         type: "paragraph",
@@ -1613,7 +1618,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F6AB} Grenzen von Baukasten-Systemen (Shopify & WordPress)"
+        text: "Grenzen von Baukasten-Systemen (Shopify & WordPress)"
       },
       {
         type: "paragraph",
@@ -1659,7 +1664,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u2705 Warum Custom-Websites klar \u00FCberlegen sind"
+        text: "Warum Custom-Websites klar \u00FCberlegen sind"
       },
       {
         type: "paragraph",
@@ -1711,7 +1716,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F510} Datenschutz & GDPR: Personalisierung richtig umsetzen"
+        text: "Datenschutz & GDPR: Personalisierung richtig umsetzen"
       },
       {
         type: "paragraph",
@@ -1732,7 +1737,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F4CA} 3 Praxisbeispiele f\u00FCr DACH-Unternehmen"
+        text: "3 Praxisbeispiele f\u00FCr DACH-Unternehmen"
       },
       {
         type: "heading",
@@ -1771,7 +1776,7 @@ const blogPosts = [
       },
       {
         type: "heading",
-        text: "\u{1F3C1} Fazit: 2026 ist das Jahr der intelligenten Websites"
+        text: "Fazit: 2026 ist das Jahr der intelligenten Websites"
       },
       {
         type: "paragraph",

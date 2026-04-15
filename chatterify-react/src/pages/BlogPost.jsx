@@ -90,7 +90,9 @@ export default function BlogPost() {
               case 'callout':
                 return (
                   <div key={i} className="blog-callout">
-                    <i className="fa-solid fa-bolt"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color, #ff6b00)" style={{ flexShrink: 0, marginTop: '4px' }} xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 22.5L14 14H19.5C20.3284 14 21 13.3284 21 12.5C21 12.1648 20.892 11.8396 20.6974 11.5671L12 0L11 9H5.5C4.67157 9 4 9.67157 4 10.5C4 10.8524 4.12 11.1963 4.33649 11.4682L13 22.5Z"/>
+                    </svg>
                     <p dangerouslySetInnerHTML={{ __html: block.text }} />
                   </div>
                 )
