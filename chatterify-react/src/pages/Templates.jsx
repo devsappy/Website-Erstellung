@@ -8,6 +8,7 @@ const projects = [
     title: 'Crunchbox',
     description: 'Bold e-commerce site for a snack brand featuring vibrant product showcases and a smooth ordering experience.',
     tags: ['E-Commerce', 'Food', 'Brand'],
+    category: 'E-Commerce',
     url: 'https://crunchbox-eight.vercel.app',
   },
   {
@@ -15,6 +16,7 @@ const projects = [
     title: 'Wander PH',
     description: 'Travel discovery site exploring destinations across the Philippines with rich visuals and curated guides.',
     tags: ['Travel', 'Editorial', 'Discovery'],
+    category: 'Travel & Hospitality',
     url: 'https://wander-ph.vercel.app',
   },
   {
@@ -22,6 +24,7 @@ const projects = [
     title: 'StudioType',
     description: 'Creative studio website showcasing typography-driven design work, branding projects and visual identity.',
     tags: ['Studio', 'Typography', 'Portfolio'],
+    category: 'Portfolio',
     url: 'https://studiotype.vercel.app',
   },
   {
@@ -29,6 +32,7 @@ const projects = [
     title: 'Aset AI',
     description: 'Landing page for an AI-powered platform showcasing intelligent automation capabilities and services.',
     tags: ['Landing Page', 'AI', 'SaaS'],
+    category: 'Landing Page',
     url: 'https://aset-six.vercel.app',
   },
   {
@@ -36,34 +40,39 @@ const projects = [
     title: 'Matias — Creative Designer',
     description: 'Portfolio website for a creative visual designer showcasing work, services and brand identity.',
     tags: ['Portfolio', 'Creative', 'Design'],
+    category: 'Portfolio',
     url: 'https://agencyowner-demo.vercel.app',
   },
   {
     id: 5,
-    title: 'CollabTrack',
-    description: 'A task and progress management platform designed for creative teams to organize and track projects.',
-    tags: ['SaaS', 'Project Management', 'Dashboard'],
-    url: 'https://collab-tracker.vercel.app',
+    title: 'Café Kaleido',
+    description: 'Warm, inviting café website with menu highlights, ambiance gallery and reservation-ready layout.',
+    tags: ['Hospitality', 'Café', 'Brand'],
+    category: 'Travel & Hospitality',
+    url: 'https://cafekaleido.vercel.app',
   },
   {
     id: 6,
     title: 'Anon Store',
     description: 'Minimal e-commerce platform with a clean shopping experience, product listings and checkout flow.',
     tags: ['E-Commerce', 'Minimal', 'Store'],
+    category: 'E-Commerce',
     url: 'https://anon-demo.vercel.app',
   },
   {
     id: 7,
-    title: 'Café Kaleido',
-    description: 'Warm, inviting café website with menu highlights, ambiance gallery and reservation-ready layout.',
-    tags: ['Hospitality', 'Café', 'Brand'],
-    url: 'https://cafekaleido.vercel.app',
+    title: 'CollabTrack',
+    description: 'A task and progress management platform designed for creative teams to organize and track projects.',
+    tags: ['SaaS', 'Project Management', 'Dashboard'],
+    category: 'SaaS',
+    url: 'https://collab-tracker.vercel.app',
   },
   {
     id: 8,
     title: 'Landing Page — Starter',
     description: 'Clean, conversion-focused single-page landing site built for speed and maximum impact.',
     tags: ['Landing Page', 'Starter', 'Responsive'],
+    category: 'Landing Page',
     url: 'https://landingpage1-peach.vercel.app',
   },
   {
@@ -71,9 +80,12 @@ const projects = [
     title: 'Expertise & Risk Management',
     description: 'Professional B2B consulting site focused on risk assessment, mitigation strategies and expert advisory.',
     tags: ['B2B', 'Consulting', 'Corporate'],
+    category: 'B2B',
     url: 'https://ve-v2.vercel.app',
   },
 ];
+
+const categories = ['All', 'E-Commerce', 'Landing Page', 'Portfolio', 'SaaS', 'B2B', 'Travel & Hospitality'];
 
 export default function Templates() {
   usePageTitle('Templates & Projekte', {
@@ -81,6 +93,11 @@ export default function Templates() {
     path: '/templates',
   });
   const [activeProject, setActiveProject] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const filteredProjects = activeCategory === 'All'
+    ? projects
+    : projects.filter((p) => p.category === activeCategory);
 
   useEffect(() => {
     document.body.style.overflow = activeProject ? 'hidden' : '';
@@ -102,8 +119,19 @@ export default function Templates() {
 
       <section className="showcase-grid-section">
         <div className="container">
+          <div className="templates-filter">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`templates-filter-btn${activeCategory === cat ? ' active' : ''}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
           <div className="showcase-grid">
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <div
                 className="showcase-card"
                 key={project.id}
