@@ -97,13 +97,13 @@ export default function Home() {
             <Link to="/web-development" className="service-card dark-card highlight-card" style={{ gridColumn: 'span 2' }}>
               <h3>Premium Webdesign<br />&amp; Website-Erstellung</h3>
               <p>Individuelle, responsive und SEO-optimierte Websites. Egal ob Landingpage, Unternehmenswebsite oder E-Commerce — wir sind Ihre Webentwickler für Österreich und Deutschland.</p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '12px' }}>
-                <span style={{ padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>React</span>
-                <span style={{ padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>Node.js</span>
-                <span style={{ padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>Next.js</span>
-                <span style={{ padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>MongoDB</span>
-                <span style={{ padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>AWS</span>
-                <span style={{ padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>PostgreSQL</span>
+              <div className="service-card-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Next.js</span>
+                <span>MongoDB</span>
+                <span>AWS</span>
+                <span>PostgreSQL</span>
               </div>
               <i className="fa-solid fa-arrow-up-right-from-square icon-arrow"></i>
             </Link>
@@ -218,6 +218,10 @@ export default function Home() {
                   <span className="explore-sample-title">{item.title}</span>
                 </Link>
               ))}
+              <Link to="/templates" className="explore-view-all-card">
+                <span>View all templates</span>
+                <i className="fa-solid fa-arrow-right"></i>
+              </Link>
             </div>
           </div>
 
@@ -239,6 +243,10 @@ export default function Home() {
                   </div>
                 </Link>
               ))}
+              <Link to="/blogs" className="explore-view-all-card">
+                <span>View all blogs</span>
+                <i className="fa-solid fa-arrow-right"></i>
+              </Link>
             </div>
           </div>
         </div>

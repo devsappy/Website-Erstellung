@@ -11,7 +11,7 @@ export default function Navbar() {
 
   // Close menu on route change / resize past mobile
   useEffect(() => {
-    const close = () => { if (window.innerWidth > 768) setMenuOpen(false); };
+    const close = () => { if (window.innerWidth > 1024) setMenuOpen(false); };
     window.addEventListener('resize', close);
     return () => window.removeEventListener('resize', close);
   }, []);
@@ -29,12 +29,14 @@ export default function Navbar() {
           <span className="michroma-regular">Website-Erstellung</span>
         </Link>
         <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
-          <Link to="/" onClick={handleScrollTop}>Home</Link>
-          <Link to="/blogs" onClick={handleScrollTop}>Blogs</Link>
-          <Link to="/about" onClick={handleScrollTop}>About Us</Link>
-          <Link to="/services" onClick={handleScrollTop}>Services</Link>
-          <Link to="/templates" onClick={handleScrollTop}>Templates</Link>
-          <Link to="/contact" onClick={handleScrollTop}>Contact</Link>
+          <div className="nav-mobile-links">
+            <Link to="/" onClick={handleScrollTop}><span>Home</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/blogs" onClick={handleScrollTop}><span>Blogs</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/about" onClick={handleScrollTop}><span>About Us</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/services" onClick={handleScrollTop}><span>Services</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/templates" onClick={handleScrollTop}><span>Templates</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+            <Link to="/contact" onClick={handleScrollTop}><span>Contact</span><i className="fa-solid fa-arrow-right nav-link-arrow" aria-hidden="true"></i></Link>
+          </div>
           <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid nav-mobile-cta" onClick={() => setMenuOpen(false)}>Book a Call</a>
         </nav>
         <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid nav-desktop-cta">Book a Call</a>

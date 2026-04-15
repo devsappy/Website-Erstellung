@@ -182,14 +182,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="templates-cta">
-        <div className="container templates-cta-container">
-          <h2>Need a custom solution?</h2>
-          <p>Every business is unique. Tell us your requirements and we'll craft a tailored package that delivers real results.</p>
-          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Book a Call</a>
-        </div>
-      </section>
     </>
   );
 }

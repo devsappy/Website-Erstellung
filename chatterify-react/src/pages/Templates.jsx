@@ -164,13 +164,6 @@ export default function Templates() {
         </div>
       )}
 
-      <section className="templates-cta">
-        <div className="container templates-cta-container">
-          <h2>Want something like this?</h2>
-          <p>We build custom websites tailored to your brand. Let's discuss your next project.</p>
-          <a href="https://calendly.com/chatterifyservice/new-meeting" target="_blank" rel="noopener noreferrer" className="btn btn-solid">Book a Call</a>
-        </div>
-      </section>
     </>
   );
 }
