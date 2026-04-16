@@ -13,11 +13,11 @@ const projects = [
   },
   {
     id: 1,
-    title: 'Wander PH',
-    description: 'Reise-Entdeckungsseite mit Zielen auf den Philippinen — visuell eindrucksvoll mit kuratierten Reiseführern.',
-    tags: ['Reise', 'Redaktion', 'Entdeckung'],
-    category: 'Reise & Gastronomie',
-    url: 'https://wander-ph.vercel.app',
+    title: 'Anon Store',
+    description: 'Minimale E-Commerce-Plattform mit aufgeräumtem Einkaufserlebnis, Produktlisten und Checkout-Prozess.',
+    tags: ['E-Commerce', 'Minimal', 'Shop'],
+    category: 'E-Commerce',
+    url: 'https://anon-demo.vercel.app',
   },
   {
     id: 2,
@@ -53,11 +53,11 @@ const projects = [
   },
   {
     id: 6,
-    title: 'Anon Store',
-    description: 'Minimale E-Commerce-Plattform mit aufgeräumtem Einkaufserlebnis, Produktlisten und Checkout-Prozess.',
-    tags: ['E-Commerce', 'Minimal', 'Shop'],
-    category: 'E-Commerce',
-    url: 'https://anon-demo.vercel.app',
+    title: 'Wander PH',
+    description: 'Reise-Entdeckungsseite mit Zielen auf den Philippinen — visuell eindrucksvoll mit kuratierten Reiseführern.',
+    tags: ['Reise', 'Redaktion', 'Entdeckung'],
+    category: 'Reise & Gastronomie',
+    url: 'https://wander-ph.vercel.app',
   },
   {
     id: 7,

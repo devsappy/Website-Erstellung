@@ -293,7 +293,7 @@ export default function Home() {
             <div className="explore-samples-grid">
               {[
                 { title: 'Crunchbox', url: 'https://crunchbox-eight.vercel.app' },
-                { title: 'Wander PH', url: 'https://wander-ph.vercel.app' },
+                { title: 'Anon Store', url: 'https://anon-demo.vercel.app' },
                 { title: 'StudioType', url: 'https://studiotype.vercel.app' },
               ].map((item) => (
                 <div
